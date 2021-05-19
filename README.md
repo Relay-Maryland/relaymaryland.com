@@ -5,9 +5,10 @@
 1. About (page)
 2. Newsletter (page)
 3. Calendar (page)
-4. FAQ (page)
-5. Rent Town Hall (page)
-6. Join / Become a Member (page)
+4. Home (logo)
+5. FAQ (page)
+6. Rent Town Hall (page)
+7. Join / Become a Member (page)
 
 ## Pages or sections
 
