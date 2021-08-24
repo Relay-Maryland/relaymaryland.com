@@ -2,13 +2,25 @@
 
 ## Global header navigation
 
-1. About (page)
-2. Newsletter (page)
-3. Calendar (page)
-4. Home (logo)
-5. FAQ (page)
+1. About Relay (dropdown)
+   a. History of Relay and St. Denis
+   b. Map
+   c. Town Hall
+   d. FAQ document
+   e. Relay Bookies Club
+   f. Security and safety
+2. About RIA (dropdown)
+   a. Membership
+   b. Newsletter
+   c. Calendar
+3. News and Events (dropdown)
+   a. News
+   b. Calendar
+   c. Newsletter
+4. FAQ (page)
+5. Contact RIA
 6. Rent Town Hall (page)
-7. Join / Become a Member (page)
+7. Become a Member (page)
 
 ## Pages or sections
 
@@ -31,7 +43,8 @@
 - hero with nav, full page pic, call to action
 - photo gallery slider
 - historical blurb
--
+- unique community attributes
+- map
 
 ### Brand
 
