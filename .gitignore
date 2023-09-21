@@ -4,3 +4,6 @@ dist
 dist-ssr
 *.local
 *.env
+.Rproj.user
+.Rhistory
+relay_web.Rproj
