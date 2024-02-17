@@ -1,0 +1,17 @@
+---
+const pages = ['About', 'News', 'Town Hall', 'Contact', 'Membership'];
+const btn = 'transition hover:text-gray-500/75';
+const btnHighlight =
+  'rounded border px-3 py-1.5 border-gray-900 bg-white text-gray-900 hover:bg-gray-900 hover:text-white';
+---
+
+<nav class="p-5 flex justify-between items-center">
+  <span>Relay, Maryland</span>
+  <div class="flex gap-6">
+    <a href="#" class={`${btn}`}>{pages[0]}</a>
+    <a href="#" class={`${btn}`}>{pages[1]}</a>
+    <a href="#" class={`${btn}`}>{pages[2]}</a>
+    <a href="#" class={`${btn}`}>{pages[3]}</a>
+  </div>
+  <a href="#" class={`${btn} ${btnHighlight}`}>{pages[4]}</a>
+</nav>

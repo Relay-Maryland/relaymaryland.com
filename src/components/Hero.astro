@@ -2,10 +2,10 @@
 import { Image } from 'astro:assets';
 import heroImg from '../img/hero-sign.jpg';
 
-import { Content as Purpose } from '../..//content/purpose.md';
+import { Content as About } from '../../content/about-relay.md';
 
 const heroImgDescription = 'Welcome sign at Relay, Maryland';
-const headline = 'Relay Improvement Association';
+const headline = 'Welcome to Relay!';
 ---
 
 <section class="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2">
@@ -16,21 +16,15 @@ const headline = 'Relay Improvement Association';
       </h2>
 
       <div class="hidden text-gray-500 md:mt-4 md:block">
-        <Purpose />
+        <About />
       </div>
 
-      <div class="mt-4 md:mt-8 grid grid-cols-2 gap-3">
+      <div class="mt-4 md:mt-8">
         <a
-          href="#"
+          href="/about"
           class="inline-block rounded bg-emerald-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400"
         >
-          Membership
-        </a>
-        <a
-          href="#"
-          class="inline-block rounded bg-emerald-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400"
-        >
-          Pay dues
+          Learn more
         </a>
       </div>
     </div>

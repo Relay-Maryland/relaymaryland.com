@@ -29,7 +29,6 @@
 - News and Events
 - Contact
 - Membership
-- Pay dues
 
 ## Home page highlights
 
@@ -50,4 +49,3 @@
 - social media
 - newsletter?
 - membership?
-- pay dues?
