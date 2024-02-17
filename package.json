@@ -1,12 +1,16 @@
 {
   "name": "relay-maryland",
+  "type": "module",
   "version": "0.1.0",
-  "author": {
-    "name": "Brian Zelip",
-    "url": "https://zelip.me"
-  },
   "homepage": "https://github.com/Relay-Maryland/relaymaryland.com",
-  "scripts": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.4.0"
+  }
 }
