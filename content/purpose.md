@@ -1,0 +1,1 @@
+Our purpose is to serve as a means for Relay and St. Denis residents to work together in creating a safe, pleasant, and civic-minded neighborhood by drawing on the interests and talents of the membership to foster community spirit, solve problems and improve the quality of life in the area.
