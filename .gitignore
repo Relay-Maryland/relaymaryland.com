@@ -19,3 +19,7 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+# R stuff
+.Rhistory
+.Rproj.user/
+relay_web.Rproj
