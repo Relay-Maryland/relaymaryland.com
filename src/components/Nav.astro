@@ -1,17 +1,26 @@
 ---
-const pages = ['About', 'News', 'Town Hall', 'Contact', 'Membership'];
-const btn = 'transition hover:text-gray-500/75';
-const btnHighlight =
-  'rounded border px-3 py-1.5 border-gray-900 bg-white text-gray-900 hover:bg-gray-900 hover:text-white';
+const pages = ['About', 'News', 'Town Hall', 'Contact', 'RIA Membership'];
 ---
 
-<nav class="p-5 flex justify-between items-center">
-  <span>Relay, Maryland</span>
-  <div class="flex gap-6">
-    <a href="#" class={`${btn}`}>{pages[0]}</a>
-    <a href="#" class={`${btn}`}>{pages[1]}</a>
-    <a href="#" class={`${btn}`}>{pages[2]}</a>
-    <a href="#" class={`${btn}`}>{pages[3]}</a>
+<style>
+  .btn {
+    @apply px-2 py-1 xxs:px-3 xxs:py-1.5 sm:px-4 sm:py-2 rounded text-black;
+    @apply text-sm xs:text-base md:text-lg;
+    @apply transition hover:bg-gray-500 hover:text-blackest;
+  }
+  .btn-primary {
+    @apply border rounded;
+    @apply transition hover:bg-gray-500 hover:text-blackest;
+  }
+</style>
+
+<nav class="container flex justify-between items-center flex-wrap">
+  <span class="hidden sm:block text-xl font-bold">Relay, MD</span>
+  <div class="mx-auto xs:mx-0 flex gap-1">
+    <a href="#" class="btn">{pages[0]}</a>
+    <a href="#" class="btn">{pages[1]}</a>
+    <a href="#" class="btn">{pages[2]}</a>
+    <a href="#" class="btn">{pages[3]}</a>
+    <a href="#" class="mx-auto xs:mx-0 btn btn-primary">{pages[4]}</a>
   </div>
-  <a href="#" class={`${btn} ${btnHighlight}`}>{pages[4]}</a>
 </nav>

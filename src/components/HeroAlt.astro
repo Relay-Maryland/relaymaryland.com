@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets';
+import heroImg from '../img/hero-sign.jpg';
+import { Content as About } from '../../content/about-relay.md';
+
+const heroImgDescription = 'Welcome sign at Relay, Maryland';
+const headline = 'Greetings from Relay and St. Denis!';
+---
+
+<style>
+  .btn {
+    @apply inline-block rounded bg-red px-6 py-2 text-lg text-white;
+    @apply transition hover:bg-red-dark;
+  }
+</style>
+
+<section>
+  <div class="mx-auto max-w-screen-2xl px-3 py-16 sm:px-4 lg:px-5 xl:px-8">
+    <div class="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
+      <div class="relative z-10 lg:py-14">
+        <div class="relative h-64 sm:h-80 lg:h-full">
+          <Image
+            alt={heroImgDescription}
+            src={heroImg}
+            class="absolute inset-0 h-full w-full object-cover"
+          />
+        </div>
+      </div>
+
+      <div class="relative flex items-center bg-yellow">
+        <!-- The overlap on the left side under the hero image -->
+        <span
+          class="hidden lg:absolute lg:inset-y-0 lg:-start-20 lg:block lg:w-20 lg:bg-yellow"
+        ></span>
+
+        <div class="max-w-[39rem] p-8 sm:p-16 lg:p-24">
+          <h2 class="mb-6 text-3xl font-bold text-black md:text-5xl">
+            {headline}
+          </h2>
+
+          <div class="text-xl/[30px]">
+            <About />
+          </div>
+
+          <div class="mt-4 md:mt-8">
+            <a href="" class="btn">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

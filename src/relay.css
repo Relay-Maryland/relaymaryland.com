@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply w-full max-w-screen-lg mx-auto;
+    @apply p-2 sm:p-3 md:p-4 lg:p-5;
+  }
+}

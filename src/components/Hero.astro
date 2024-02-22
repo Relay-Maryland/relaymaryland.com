@@ -5,28 +5,28 @@ import heroImg from '../img/hero-sign.jpg';
 import { Content as About } from '../../content/about-relay.md';
 
 const heroImgDescription = 'Welcome sign at Relay, Maryland';
-const headline = 'Welcome to Relay!';
+const headline = 'Greetings from Relay and St. Denis!';
 ---
 
-<section class="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2">
-  <div class="p-8 md:p-12 lg:px-16 lg:py-24">
-    <div class="mx-auto max-w-xl text-center">
-      <h2 class="text-2xl font-bold text-gray-900 md:text-3xl">
-        {headline}
-      </h2>
+<style>
+  .btn {
+    @apply inline-block rounded bg-red px-6 py-2 text-lg text-white;
+    @apply transition hover:bg-red-dark;
+  }
+</style>
 
-      <div class="hidden text-gray-500 md:mt-4 md:block">
-        <About />
-      </div>
+<section class="overflow-hidden bg-yellow sm:grid sm:grid-cols-2">
+  <div class="mx-auto max-w-lg p-8 md:p-12 lg:px-16 lg:py-24 text-center">
+    <h2 class="mb-6 text-3xl font-bold text-black md:text-5xl">
+      {headline}
+    </h2>
 
-      <div class="mt-4 md:mt-8">
-        <a
-          href="/about"
-          class="inline-block rounded bg-emerald-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400"
-        >
-          Learn more
-        </a>
-      </div>
+    <div class="text-xl/[30px]">
+      <About />
+    </div>
+
+    <div class="mt-4 md:mt-8">
+      <a href="" class="btn"> Explore</a>
     </div>
   </div>
 
