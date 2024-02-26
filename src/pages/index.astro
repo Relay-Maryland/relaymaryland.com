@@ -2,10 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
-import HeroAlt from '../components/HeroAlt.astro';
 import Section1 from '../components/Section1.astro';
 import Section2 from '../components/Section2.astro';
-import Placeholder from '../components/Placeholder.astro';
 import Footer from '../components/Footer.astro';
 
 const title = 'Welcome to Relay, Maryland';
@@ -14,10 +12,8 @@ const title = 'Welcome to Relay, Maryland';
 <Layout title={title}>
   <Nav />
   <main>
-    <!-- <Hero /> -->
-    <HeroAlt />
-    <Placeholder />
-    <!-- <Section1 /> -->
+    <Hero />
+    <Section1 />
     <Section2 />
   </main>
   <Footer />

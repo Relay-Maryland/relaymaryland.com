@@ -8,7 +8,9 @@ export default defineConfig({
     tailwind({
       // Tell @astrojs/tailwind to not inject default `base.css` on every page
       // so we can define and import our own custom `base.css`.
-      applyBaseStyles: false
+      applyBaseStyles: false,
+      // Apply the tailwindcss/nesting postcss plugin.
+      nesting: true
     })
   ]
 });

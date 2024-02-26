@@ -33,12 +33,14 @@
 ## Home page highlights
 
 - hero
-- snippet blurb about Relay, link to About page
+  - explain what the site offers by describing and linking to each of the pages, 
+ie: multiple calls to action
+- snippet blurb about Relay (that used to be in the hero) (link to About page?)
+- Feature: community attributes overlaid on full screen image
+- calendar, link to news page 
 - read newsletter, link to News page
-- Benefits of RIA membership, link to Membership page
-- pay dues, link to membership page
-- calendar, link to news page
-- map
+- Feature: RIA membership (benefits blurb) (link to Membership page)
+- map?
 - rent town hall, link to Town Hall page
 - social media links
 

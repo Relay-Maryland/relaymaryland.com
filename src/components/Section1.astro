@@ -1,13 +1,25 @@
 ---
+import { Image } from 'astro:assets';
 
+import { Content as About } from '../../content/about-relay.md';
+
+import mapImg from '../img/map1.png';
+const mapImgDescription = 'Map of Relay and St. Denis, Maryland';
 ---
 
-<section class="h-dvh container">
-  <p class="w-1/2">
-    Historic Relay and St. Denis is a vibrant destination. Nearby is the
-    glorious Patapsco State Park and National historic landmark Thomas Viaduct.
-    Relay is a popular destination for train, recreation and exercise
-    enthusiasts. The picturesque streets highlight the glory of historic
-    Baltimore County Maryland.
-  </p>
+<section class="my-20 sm:my-28 md:my-32 lg:my-20">
+  <div class="container grid grid-cols-1 lg:grid-cols-2 lg:gap-16 lg:px-16">
+    <div
+      class="max-w-[700px] md:mx-auto flex justify-center items-center px-16 lg:px-0 text-2xl/[30px] lg:text-3xl/[40px] text-center lg:text-right"
+    >
+      <About />
+    </div>
+    <div class="hidden lg:block px-16 md:px-0">
+      <Image
+        src={mapImg}
+        alt={mapImgDescription}
+        class="border-8 border-black"
+      />
+    </div>
+  </div>
 </section>

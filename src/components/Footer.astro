@@ -1,5 +1,5 @@
 ---
-const pages = ['About', 'News', 'Town Hall', 'Contact', 'RIA Membership'];
+const pages = ['About', 'News', 'Town Hall', 'Connect', 'RIA Membership'];
 ---
 
 <style>
@@ -13,11 +13,12 @@ const pages = ['About', 'News', 'Town Hall', 'Contact', 'RIA Membership'];
     @apply block font-bold;
   }
   nav {
-    @apply grid gap-x-4;
+    @apply grid gap-4;
     grid-template-columns: repeat(5, auto);
+    @apply place-items-center;
   }
   nav a {
-    @apply hover:underline hover:text-blackest;
+    @apply transition hover:underline hover:text-red text-center;
   }
   nav a:last-child {
     @apply col-span-5 place-self-center;
@@ -25,14 +26,12 @@ const pages = ['About', 'News', 'Town Hall', 'Contact', 'RIA Membership'];
   svg {
     @apply w-6 h-6;
     @apply fill-blue;
+    @apply transition hover:fill-red;
   }
 </style>
 
-<footer class="container">
-  <address>
-    <span>Relay Improvement Association</span>
-    P.O. Box 24046 &middot; Relay, Maryland &middot; 21227
-  </address>
+<footer class="container flex flex-col justify-center items-center gap-y-4">
+  <p class="font-bold">Relay Improvement Association</p>
   <nav>
     <a href="#">{pages[0]}</a>
     <a href="#">{pages[1]}</a>

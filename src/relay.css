@@ -2,9 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+[data-heroblurb] {
+  li {
+    @apply mb-3 md:mb-5;
+  }
+  li:last-of-type {
+    @apply mb-0;
+  }
+  a {
+    @apply text-red underline;
+    @apply transition hover:text-blue;
+  }
+}
+
 @layer components {
   .container {
-    @apply w-full max-w-screen-lg mx-auto;
-    @apply p-2 sm:p-3 md:p-4 lg:p-5;
+    @apply w-full max-w-screen-2xl mx-auto;
+    @apply px-2 sm:px-3 md:px-4 lg:px-5;
   }
 }
