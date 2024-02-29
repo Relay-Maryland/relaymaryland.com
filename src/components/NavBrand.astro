@@ -1,0 +1,31 @@
+---
+const isHome = Astro.url.pathname === '/';
+const brand = { short: 'Relay, MD', long: 'Relay, Maryland' };
+const title = 'Go home';
+---
+
+<style>
+  a {
+    @apply transition hover:underline;
+  }
+</style>
+
+<div class="text-xl md:text-2xl font-bold">
+  {
+    isHome ? (
+      <>
+        <span class="hidden sm:block md:hidden">{brand.short}</span>
+        <span class="block sm:hidden md:block">{brand.long}</span>
+      </>
+    ) : (
+      <>
+        <a href="/" class="hidden sm:block md:hidden" title={title}>
+          {brand.short}
+        </a>
+        <a href="/" class="block sm:hidden md:block" title={title}>
+          {brand.long}
+        </a>
+      </>
+    )
+  }
+</div>

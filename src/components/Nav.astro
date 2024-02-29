@@ -1,28 +1,20 @@
 ---
-const pages = ['About', 'News', 'Town Hall', 'Connect', 'RIA Membership'];
+import routes from '../data/routes.mjs';
+
+import NavBrand from './NavBrand.astro';
+import NavLink from './NavLink.astro';
+
+const nonHomeRoutes = routes.filter((route) => !Object.hasOwn(route, '/'));
 ---
 
-<style>
-  .btn {
-    @apply px-2 py-1 xxs:px-3 xxs:py-1.5 sm:px-4 sm:py-2 rounded text-black;
-    @apply text-sm xs:text-base md:text-lg;
-    @apply transition hover:bg-gray-500 hover:text-blackest;
-  }
-  .btn-primary {
-    @apply border rounded;
-    @apply transition hover:bg-gray-500 hover:text-blackest;
-  }
-</style>
+<nav
+  class="container lg:mb-8 py-4 sm:py-5 flex flex-col gap-y-1 sm:gap-y-0 sm:flex-row justify-between items-center"
+>
+  <NavBrand />
 
-<nav class="container lg:mb-8 py-4 sm:py-5 flex justify-between items-center">
-  <span class="hidden sm:block text-xl font-bold">Relay, MD</span>
   <div
     class="mx-auto sm:mx-0 flex justify-between items-center flex-wrap gap-1"
   >
-    <a href="#" class="btn">{pages[0]}</a>
-    <a href="#" class="btn">{pages[1]}</a>
-    <a href="#" class="btn">{pages[2]}</a>
-    <a href="#" class="btn">{pages[3]}</a>
-    <a href="#" class="mx-auto xs:mx-0 btn btn-primary">{pages[4]}</a>
+    {nonHomeRoutes.map((route) => <NavLink route={route} />)}
   </div>
 </nav>

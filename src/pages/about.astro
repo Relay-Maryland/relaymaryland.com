@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'About';
+---
+
+<Layout title={title}>
+  <Nav />
+  <main class="container">
+    <h1 class="text-2xl font-bold">{title}</h1>
+  </main>
+  <Footer />
+</Layout>
