@@ -16,13 +16,33 @@
 }
 
 [data-prose] {
+  @apply text-base md:text-lg;
+
   h2 {
-    @apply mb-3;
+    @apply mt-4 mb-3;
+    @apply text-2xl md:text-3xl font-bold;
+  }
+  h3 {
+    @apply mt-4 mb-3;
     @apply text-xl sm:text-2xl font-bold;
   }
-
   p {
+    @apply mb-3 md:mb-4 max-w-[80ch];
+  }
+  ul {
     @apply mb-3 md:mb-4;
+    @apply list-disc pl-5;
+  }
+  ol {
+    @apply mb-3 md:mb-4;
+    @apply list-decimal pl-5;
+  }
+  li {
+    @apply mb-2;
+  }
+  a {
+    @apply text-red underline;
+    @apply transition hover:text-black;
   }
 }
 

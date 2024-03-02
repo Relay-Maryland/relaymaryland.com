@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
 import Section1 from '../components/Section1.astro';
@@ -9,7 +9,7 @@ import Footer from '../components/Footer.astro';
 const title = 'Welcome to Relay, Maryland';
 ---
 
-<Layout title={title}>
+<BaseLayout title={title}>
   <Nav />
   <main>
     <Hero />
@@ -17,4 +17,4 @@ const title = 'Welcome to Relay, Maryland';
     <Section2 />
   </main>
   <Footer />
-</Layout>
+</BaseLayout>

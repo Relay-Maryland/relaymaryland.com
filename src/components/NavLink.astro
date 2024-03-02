@@ -1,6 +1,7 @@
 ---
 const { route } = Astro.props;
 const [path, title] = Object.entries(route)[0];
+const pathIsActive = path === Astro.url.pathname;
 ---
 
 <style>
@@ -8,6 +9,10 @@ const [path, title] = Object.entries(route)[0];
     @apply px-2 py-1 xxs:px-3 xxs:py-1.5 sm:px-4 sm:py-2 rounded text-black;
     @apply text-sm sm:text-base md:text-lg;
     @apply transition hover:bg-gray-500 hover:text-blackest;
+
+    &.active {
+      @apply bg-red text-white hover:cursor-default;
+    }
   }
   .btn-primary {
     @apply mx-auto xs:mx-0;
@@ -16,8 +21,23 @@ const [path, title] = Object.entries(route)[0];
   }
 </style>
 
-<a
-  href={path}
-  class:list={['btn', { 'btn-primary': path.includes('membership') }]}
-  >{title}</a
->
+{
+  pathIsActive ? (
+    <span
+      class:list={[
+        'btn',
+        { 'btn-primary': path.includes('membership') },
+        'active'
+      ]}
+    >
+      {title}
+    </span>
+  ) : (
+    <a
+      href={path}
+      class:list={['btn', { 'btn-primary': path.includes('membership') }]}
+    >
+      {title}
+    </a>
+  )
+}

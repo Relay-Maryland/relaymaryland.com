@@ -1,8 +1,9 @@
 ---
-import Layout from './Layout.astro';
+import BaseLayout from './BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-const { frontmatter } = Astro.props;
+
+const { frontmatter: fm } = Astro.props;
 ---
 
 <style>
@@ -15,18 +16,14 @@ const { frontmatter } = Astro.props;
   }
 </style>
 
-<Layout title={frontmatter.title}>
+<BaseLayout title={fm.title}>
   <Nav />
   <main>
-    <h1 class="text-2xl sm:text-3xl font-bold">
-      {frontmatter.title}
-    </h1>
-
+    <h1 class="text-2xl sm:text-3xl font-bold">{fm.title}</h1>
     <hr />
-
     <article data-prose>
       <slot />
     </article>
   </main>
   <Footer />
-</Layout>
+</BaseLayout>
