@@ -15,6 +15,17 @@
   }
 }
 
+[data-prose] {
+  h2 {
+    @apply mb-3;
+    @apply text-xl sm:text-2xl font-bold;
+  }
+
+  p {
+    @apply mb-3 md:mb-4;
+  }
+}
+
 @layer components {
   .container {
     @apply w-full max-w-screen-xl mx-auto;

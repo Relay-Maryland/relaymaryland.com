@@ -1,7 +1,10 @@
 ---
+// USING ./about.md instead of this file so commenting out imports that don't work
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+
+// import { Content as History } from '../../content/history-of-Relay.md';
 
 const title = 'About';
 ---
@@ -9,7 +12,8 @@ const title = 'About';
 <Layout title={title}>
   <Nav />
   <main class="container">
-    <h1 class="text-2xl font-bold">{title}</h1>
+    <h1>{title}</h1>
+    <!-- <History /> -->
   </main>
   <Footer />
 </Layout>

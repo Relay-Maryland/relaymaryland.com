@@ -1,0 +1,32 @@
+---
+import Layout from './Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+const { frontmatter } = Astro.props;
+---
+
+<style>
+  main {
+    @apply max-w-screen-md mx-auto px-3 sm:px-4;
+  }
+
+  hr {
+    @apply mt-2 mb-3 md:mt-4 md:mb-6 border-red bg-red h-1;
+  }
+</style>
+
+<Layout title={frontmatter.title}>
+  <Nav />
+  <main>
+    <h1 class="text-2xl sm:text-3xl font-bold">
+      {frontmatter.title}
+    </h1>
+
+    <hr />
+
+    <article data-prose>
+      <slot />
+    </article>
+  </main>
+  <Footer />
+</Layout>
