@@ -1,7 +1,7 @@
 ---
 const { route } = Astro.props;
 const [path, title] = Object.entries(route)[0];
-const pathIsActive = path === Astro.url.pathname;
+const pathIsActive = Astro.url.pathname.includes(path);
 ---
 
 <style>
@@ -11,7 +11,7 @@ const pathIsActive = path === Astro.url.pathname;
     @apply transition hover:bg-gray-500 hover:text-blackest;
 
     &.active {
-      @apply bg-red text-white hover:cursor-default;
+      @apply bg-red text-whitest hover:cursor-default;
     }
   }
   .btn-primary {
@@ -25,9 +25,8 @@ const pathIsActive = path === Astro.url.pathname;
   pathIsActive ? (
     <span
       class:list={[
-        'btn',
-        { 'btn-primary': path.includes('membership') },
-        'active'
+        'btn active',
+        { 'btn-primary': path.includes('membership') }
       ]}
     >
       {title}

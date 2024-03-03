@@ -7,7 +7,7 @@ const colors2 = {
   black: theme2.black[400],
   blackest: theme2.black[100],
   white: theme2.ghost_white[600],
-  whitest: theme2.ghost_white[900],
+  whitest: '#fff',
   gray: theme2.platinum1,
   'gray-light': theme2.black[800],
   'gray-dark': theme2.black[600],
