@@ -1,0 +1,78 @@
+---
+import contact from '../data/contact.mjs';
+
+import PageLayout from '../layouts/PageLayout.astro';
+
+const title = 'Contact';
+---
+
+<style>
+  address {
+    @apply text-base lg:text-xl not-italic;
+  }
+
+  h2 {
+    @apply mt-5 mb-4;
+    @apply text-2xl md:text-3xl sm:font-bold;
+  }
+  h3 {
+    @apply mt-4 mb-3;
+    @apply text-xl sm:text-2xl sm:font-bold;
+  }
+  p {
+    @apply mb-3 md:mb-4 max-w-[80ch];
+  }
+  a:not([href^='tel:']) {
+    @apply text-red underline;
+    @apply transition hover:text-black;
+  }
+
+  .icon {
+    @apply relative;
+    @apply ml-6 lg:ml-8;
+
+    &::before {
+      content: '';
+      @apply -left-6 lg:-left-8 top-[3px];
+      background-repeat: no-repeat;
+      @apply w-5 h-5 lg:w-6 lg:h-6;
+      @apply absolute inline-block;
+    }
+
+    &.envelope::before {
+      background-image: url(../img/envelope-solid.svg);
+    }
+
+    &.phone::before {
+      background-image: url(../img/phone-solid.svg);
+    }
+
+    &.email::before {
+      background-image: url(../img/fa-at-symbol.svg);
+    }
+
+    &.fb::before {
+      background-image: url(../img/fa-fb.svg);
+    }
+  }
+</style>
+
+<PageLayout title={title}>
+  <h2>Relay Improvement Association</h2>
+  <address class="flex flex-col items-start gap-y-4">
+    <div class="icon envelope">
+      <span class="block">{contact.address.street}</span>
+      <span
+        >{contact.address.city}, {contact.address.state.long}&nbsp;
+        {contact.address.zip}</span
+      >
+    </div>
+    <a class="icon email" href={`mailto:${contact.email}`}>{contact.email}</a>
+    <a class="icon fb" href={contact.facebook.full}
+      >facebook.com/{contact.facebook.id}</a
+    >
+    <a class="icon phone" href={`tel:${contact.phone.Frank}`}
+      >{contact.phone.Frank}</a
+    >
+  </address>
+</PageLayout>

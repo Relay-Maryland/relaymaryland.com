@@ -10,5 +10,6 @@ export default {
     state: { short: 'MD', long: 'Maryland' },
     zip: '21227'
   },
-  facebook: 'https://www.facebook.com/RelayMd/'
+  facebook: { id: 'RelayMd', full: 'https://www.facebook.com/RelayMd/' },
+  github: 'https://github.com/Relay-Maryland/relaymaryland.com'
 };

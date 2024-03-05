@@ -19,12 +19,12 @@
   @apply text-base md:text-lg;
 
   h2 {
-    @apply mt-4 mb-3;
-    @apply text-2xl md:text-3xl font-bold;
+    @apply mt-5 mb-4;
+    @apply text-2xl md:text-3xl sm:font-bold;
   }
   h3 {
     @apply mt-4 mb-3;
-    @apply text-xl sm:text-2xl font-bold;
+    @apply text-xl sm:text-2xl sm:font-bold;
   }
   p {
     @apply mb-3 md:mb-4 max-w-[80ch];

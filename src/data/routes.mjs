@@ -8,6 +8,6 @@ export default [
   { '/about': 'About' },
   { '/news': 'News' },
   { '/hall': 'Town Hall' },
-  { '/connect': 'Connect' },
+  { '/contact': 'Contact' },
   { '/membership': 'RIA Membership' }
 ];

@@ -2,6 +2,7 @@
 import routes from '../data/routes.mjs';
 import contact from '../data/contact.mjs';
 
+import SvgGitHub from './SvgGitHub.astro';
 import SvgFb from './SvgFb.astro';
 
 const rts = routes.map((route) => Object.entries(route)[0]);
@@ -24,8 +25,9 @@ const rts = routes.map((route) => Object.entries(route)[0]);
     <div class="flex flex-wrap justify-center gap-x-6">
       {rts.map(([path, title]) => <a href={path}>{title}</a>)}
     </div>
-    <div class="flex justify-center">
-      <a href={contact.facebook}><SvgFb /></a>
+    <div class="flex justify-center gap-x-4">
+      <a href={contact.facebook.full}><SvgFb /></a>
+      <a href={contact.github}><SvgGitHub /></a>
     </div>
   </nav>
 </footer>
