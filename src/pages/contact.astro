@@ -12,7 +12,7 @@ const title = 'Contact';
   }
 
   h2 {
-    @apply mt-5 mb-4;
+    @apply mt-5 mb-4 lg:mb-6;
     @apply text-2xl md:text-3xl sm:font-bold;
   }
   h3 {
@@ -39,16 +39,16 @@ const title = 'Contact';
       @apply absolute inline-block;
     }
 
+    &.location::before {
+      background-image: url(../img/fa-location-dot.svg);
+    }
+
     &.envelope::before {
       background-image: url(../img/envelope-solid.svg);
     }
 
     &.phone::before {
       background-image: url(../img/phone-solid.svg);
-    }
-
-    &.email::before {
-      background-image: url(../img/fa-at-symbol.svg);
     }
 
     &.fb::before {
@@ -59,15 +59,16 @@ const title = 'Contact';
 
 <PageLayout title={title}>
   <h2>Relay Improvement Association</h2>
-  <address class="flex flex-col items-start gap-y-4">
-    <div class="icon envelope">
+  <address class="flex flex-col items-start gap-y-4 lg:gap-y-6">
+    <div class="icon location">
       <span class="block">{contact.address.street}</span>
       <span
         >{contact.address.city}, {contact.address.state.long}&nbsp;
         {contact.address.zip}</span
       >
     </div>
-    <a class="icon email" href={`mailto:${contact.email}`}>{contact.email}</a>
+    <a class="icon envelope" href={`mailto:${contact.email}`}>{contact.email}</a
+    >
     <a class="icon fb" href={contact.facebook.full}
       >facebook.com/{contact.facebook.id}</a
     >

@@ -1,0 +1,18 @@
+---
+import Img from './Img.astro';
+import Text from './Text.astro';
+---
+
+<style>
+  section {
+    @apply relative;
+    @apply h-dvh min-h-[600px] md:min-h-[700px];
+    @apply w-full;
+    @apply flex justify-center items-center;
+  }
+</style>
+
+<section>
+  <Text />
+  <Img />
+</section>

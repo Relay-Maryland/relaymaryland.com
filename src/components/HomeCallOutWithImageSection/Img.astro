@@ -1,0 +1,10 @@
+---
+import { Image } from 'astro:assets';
+
+import mapImg from '../../img/map1.png';
+const mapImgDescription = 'Map of Relay and St. Denis, Maryland';
+---
+
+<div class="hidden lg:block px-16 md:px-0">
+  <Image src={mapImg} alt={mapImgDescription} class="border-8 border-black" />
+</div>
