@@ -1,12 +1,14 @@
 ---
-
+const viaduct = 'https://en.wikipedia.org/wiki/Thomas_Viaduct';
+const park = 'https://dnr.maryland.gov/publiclands/Pages/central/patapsco.aspx';
 ---
 
 <style>
   .text-overlay {
-    background-color: rgba(0, 0, 0, 0.7);
-    @apply p-4 md:p-6 lg:p-8 rounded-lg;
-    @apply w-11/12 md:w-4/5 lg:w-3/4 xl:w-2/3 max-w-screen-lg;
+    @apply w-full md:w-4/5 lg:w-3/4 xl:w-2/3 max-w-screen-lg;
+    @apply px-8 py-8 md:p-6 lg:p-8 md:rounded-lg;
+    @apply flex flex-col md:grid grid-cols-12 gap-x-10 gap-y-6 md:gap-y-8;
+    @apply bg-blue md:bg-[#000000] md:bg-opacity-70;
   }
   li {
     @apply flex gap-1 md:gap-2 lg:gap-3 mb-2 lg:mb-3;
@@ -14,18 +16,24 @@
   }
   li::before {
     content: '✓';
+    @apply mr-1 md:mr-0;
     @apply text-white;
+  }
+  li:last-child {
+    @apply mb-0;
+  }
+  a {
+    @apply text-white underline;
+    @apply transition hover:text-red;
   }
 </style>
 
-<div class="text-overlay md:grid grid-cols-12 gap-x-10 gap-y-4">
-  <h2
-    class="col-span-12 mb-3 md:mb-0 text-2xl md:text-3xl lg:text-4xl font-bold text-white"
-  >
+<div class="text-overlay">
+  <h2 class="col-span-12 text-2xl md:text-3xl lg:text-4xl font-bold text-white">
     A vibrant destination...
   </h2>
   <div
-    class="col-span-12 lg:col-span-7 mb-3 md:mb-0 text-white md:text-lg lg:text-xl/[30px] flex flex-col gap-3 md:gap-4"
+    class="order-2 lg:order-1 col-span-12 lg:col-span-7 text-white md:text-lg lg:text-xl/[30px] flex flex-col gap-3 md:gap-4"
   >
     <p>
       Located in the Patapsco River Valley, Relay and St. Denis are rich in
@@ -33,8 +41,12 @@
     </p>
     <p>
       The community is home to a variety of historic landmarks, including the
-      Thomas Viaduct, the oldest multi-arched stone railroad bridge in the
-      world, and Patapsco Valley State Park.
+      <a href={viaduct} title={viaduct}>Thomas Viaduct</a>, the oldest
+      multi-arched stone railroad bridge in the world, and <a
+        href={park}
+        title={park}
+        >Patapsco Valley State Park
+      </a>.
     </p>
     <p>
       The area is a popular destination for train, recreation and exercise
@@ -43,7 +55,7 @@
     </p>
   </div>
   <ul
-    class="col-span-12 lg:col-span-5 ml-2 md:ml-4 lg:ml-0 md:text-lg lg:text-xl text-white"
+    class="order-1 lg:order-2 col-span-12 lg:col-span-5 md:text-lg lg:text-xl text-white"
   >
     <li>Well-preserved residential architecture</li>
     <li>Tradition of activism and community engagement</li>
