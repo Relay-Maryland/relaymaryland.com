@@ -19,11 +19,11 @@
   @apply text-base md:text-lg;
 
   h2 {
-    @apply mt-5 mb-4;
+    @apply mt-6 mb-8;
     @apply text-2xl md:text-3xl sm:font-bold;
   }
   h3 {
-    @apply mt-4 mb-3;
+    @apply mt-5 mb-3;
     @apply text-xl sm:text-2xl sm:font-bold;
   }
   p {
@@ -43,6 +43,9 @@
   a {
     @apply text-red underline;
     @apply transition hover:text-black;
+  }
+  img {
+    @apply my-6 md:my-8;
   }
 }
 

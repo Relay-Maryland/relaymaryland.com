@@ -23,19 +23,9 @@ const pathIsActive = Astro.url.pathname.includes(path);
 
 {
   pathIsActive ? (
-    <span
-      class:list={[
-        'btn active',
-        { 'btn-primary': path.includes('membership') }
-      ]}
-    >
-      {title}
-    </span>
+    <span class="btn active">{title}</span>
   ) : (
-    <a
-      href={path}
-      class:list={['btn', { 'btn-primary': path.includes('membership') }]}
-    >
+    <a class="btn" href={path}>
       {title}
     </a>
   )
