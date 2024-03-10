@@ -19,11 +19,11 @@
   @apply text-base md:text-lg;
 
   h2 {
-    @apply mt-6 mb-8;
+    @apply mt-8 mb-6;
     @apply text-2xl md:text-3xl sm:font-bold;
   }
   h3 {
-    @apply mt-5 mb-3;
+    @apply mt-3 mb-5;
     @apply text-xl sm:text-2xl sm:font-bold;
   }
   p {
