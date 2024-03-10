@@ -1,0 +1,21 @@
+---
+const { id, title } = Astro.props;
+const src = `https://www.youtube-nocookie.com/embed/${id}?si=ScYRg8jh2QvGXAzh`;
+---
+
+<style>
+  iframe {
+    all: unset;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    @apply my-6 md:my-8;
+    inset: 0;
+    border: 0;
+  }
+</style>
+
+<iframe
+  src={src}
+  title={title}
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen></iframe>
