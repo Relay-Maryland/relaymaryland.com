@@ -30,15 +30,11 @@ If you own a historic home in Relay/St. Denis, you may be able to get a tax cred
 
 ### In Case of Emergency
 
-Call BR Police Dispatch at [410-887-0872](tel:410-887-0872), or call 911. If a Garden District security patrol officer happens to already be in the area, Dispatch will call them.
-
-### Security Patrol
-
-If you see a crime in progress call BR Police Dispatch at [410-887-0872](tel:410-887-0872). PLEASE always start your message with your name, address, and phone number.
+Call Baltimore County Police Dispatch at [410-887-0872](tel:410-887-0872), or call 911.
 
 ### Report security concerns
 
-Fill out the contact form here and report your concern. Our board member in charge of security will reach out to you regarding your concern.
+If you see a crime in progress call Baltimore County Police Dispatch at [410-887-0872](tel:410-887-0872). PLEASE always start your message with your name, address, and phone number.
 
 ### Home vacancies
 
