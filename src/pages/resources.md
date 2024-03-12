@@ -38,7 +38,7 @@ If you see a crime in progress call Baltimore County Police Dispatch at [410-887
 
 ### Home vacancies
 
-To inform the Garden District Security Patrol that you'll be out of town, submit a house [vacancy notice](https://resources.baltimorecountymd.gov/Documents/Police/2014pdfs/vacanthouseform141119.pdf) or email it to your [precinct](https://www.baltimorecountymd.gov/departments/police/precinctsgeneral/precinctsall.html).
+To inform the Baltimore County Police Department that you'll be out of town, submit a [house vacancy notice](https://resources.baltimorecountymd.gov/Documents/Police/2014pdfs/vacanthouseform141119.pdf) or email it to your [precinct](https://www.baltimorecountymd.gov/departments/police/precinctsgeneral/precinctsall.html).
 
 ### Baltimore County Police Department
 
