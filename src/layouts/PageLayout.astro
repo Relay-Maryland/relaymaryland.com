@@ -12,7 +12,9 @@ const { title } = Astro.props.frontmatter || Astro.props;
   }
 
   hr {
-    @apply mt-2 mb-3 md:mt-4 md:mb-6 border-red bg-red h-0 sm:h-1;
+    @apply mt-2 mb-3 md:mt-4 md:mb-6 h-0 sm:h-1;
+    @apply border-red bg-red;
+    @apply dark:border-yellow dark:bg-yellow;
   }
 </style>
 

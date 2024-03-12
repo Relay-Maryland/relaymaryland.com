@@ -24,18 +24,22 @@ const headline = 'Greetings from Relay and St. Denis!';
           <Image
             alt={heroImgDescription}
             src={heroImg}
-            class="absolute inset-0 h-full w-full object-cover"
+            class="absolute inset-0 h-full w-full object-cover rounded-t-sm lg:rounded-md xl:rounded-lg"
           />
         </div>
       </div>
 
-      <div class="relative flex items-center justify-center bg-yellow">
+      <div
+        class="relative flex items-center justify-center bg-yellow rounded-b-sm lg:rounded-bl-none lg:rounded-r-md xl:rounded-r-lg"
+      >
         <span
-          class="hidden lg:absolute lg:inset-y-0 lg:-start-20 lg:block lg:w-20 lg:bg-yellow"
+          class="hidden lg:absolute lg:inset-y-0 lg:-start-20 lg:block lg:w-20 lg:bg-yellow rounded-b-sm lg:rounded-br-none lg:rounded-l-md xl:rounded-l-lg"
         ></span><!-- The overlap on the left side under the hero image -->
 
         <div class="lg:max-w-[42rem] p-6 md:p-10 lg:py-0">
-          <h2 class="mb-4 md:mb-6 text-3xl md:text-5xl font-bold text-black">
+          <h2
+            class="mb-4 md:mb-6 text-3xl md:text-5xl font-bold text-black dark:text-dmBlack"
+          >
             {headline}
           </h2>
 

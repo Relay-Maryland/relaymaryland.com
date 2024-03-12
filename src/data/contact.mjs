@@ -11,5 +11,9 @@ export default {
     zip: '21227'
   },
   facebook: { id: 'RelayMd', full: 'https://www.facebook.com/RelayMd/' },
+  instagram: {
+    id: 'RelayMaryland',
+    full: 'https://www.instagram.com/RelayMaryland/'
+  },
   github: 'https://github.com/Relay-Maryland/relaymaryland.com'
 };

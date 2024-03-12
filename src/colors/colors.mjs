@@ -4,8 +4,10 @@ import theme2 from './theme2.mjs';
 const colors2 = {
   transparent: 'transparent',
   current: 'currentColor',
+  _black: theme2.black,
   black: theme2.black[400],
   blackest: theme2.black[100],
+  _white: theme2.ghost_white,
   white: theme2.ghost_white[600],
   whitest: '#fff',
   gray: theme2.platinum1,
@@ -20,7 +22,11 @@ const colors2 = {
   _blue: theme2.blue,
   blue: theme2.blue[400],
   'blue-light': theme2.blue[500],
-  'blue-dark': theme2.blue[300]
+  'blue-dark': theme2.blue[300],
+  // dark mode variants
+  dmBlack: '#23262f', // via Astro docs nav
+  dmWhite: theme2.ghost_white[800],
+  dmGray: theme2.platinum1[200]
 };
 
 const colors1 = {

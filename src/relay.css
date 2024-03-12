@@ -5,6 +5,7 @@
 [data-heroblurb] {
   li {
     @apply mb-3 md:mb-5;
+    @apply text-black dark:text-dmBlack;
   }
   li:last-of-type {
     @apply mb-0;
@@ -41,8 +42,8 @@
     @apply mb-2;
   }
   a {
-    @apply text-red underline;
-    @apply transition hover:text-black;
+    @apply text-red dark:text-yellow underline;
+    @apply transition hover:text-black dark:hover:text-red;
   }
   img {
     @apply my-6 md:my-8;

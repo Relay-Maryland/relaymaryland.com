@@ -6,18 +6,16 @@ const pathIsActive = Astro.url.pathname.includes(path);
 
 <style>
   .btn {
-    @apply px-2 py-1 xxs:px-3 xxs:py-1.5 sm:px-4 sm:py-2 rounded text-black;
+    @apply px-2 py-1 xxs:px-3 xxs:py-1.5 sm:px-4 sm:py-2;
     @apply text-sm sm:text-base md:text-lg;
-    @apply transition hover:bg-gray-500 hover:text-blackest;
+    @apply text-black dark:text-dmWhite;
+    @apply transition hover:bg-gray-500 hover:text-blackest rounded;
+    @apply dark:hover:bg-gray-200 dark:hover:text-whitest;
 
     &.active {
       @apply bg-red text-whitest hover:cursor-default;
+      @apply dark:bg-yellow dark:text-blackest;
     }
-  }
-  .btn-primary {
-    @apply mx-auto xs:mx-0;
-    @apply border rounded;
-    @apply transition hover:bg-gray-500 hover:text-blackest;
   }
 </style>
 

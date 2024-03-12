@@ -4,23 +4,8 @@ import contact from '../data/contact.mjs';
 
 <style>
   address {
+    @apply flex flex-col items-start gap-y-2 md:gap-y-4;
     @apply text-base lg:text-xl not-italic;
-  }
-
-  h2 {
-    @apply mt-5 mb-4 lg:mb-6;
-    @apply text-2xl md:text-3xl sm:font-bold;
-  }
-  h3 {
-    @apply mt-4 mb-3;
-    @apply text-xl sm:text-2xl sm:font-bold;
-  }
-  p {
-    @apply mb-3 md:mb-4 max-w-[80ch];
-  }
-  a:not([href^='tel:']) {
-    @apply text-red underline;
-    @apply transition hover:text-black;
   }
 
   .icon {
@@ -35,25 +20,30 @@ import contact from '../data/contact.mjs';
       @apply absolute inline-block;
     }
 
+    /* See backgroundImage extensions in tailwind.config.mjs */
     &.location::before {
-      background-image: url(../img/fa-location-dot.svg);
+      @apply bg-location dark:bg-locationWhite;
     }
 
     &.envelope::before {
-      background-image: url(../img/envelope-solid.svg);
+      @apply bg-envelope dark:bg-envelopeWhite;
     }
 
     &.phone::before {
-      background-image: url(../img/phone-solid.svg);
+      @apply bg-phone dark:bg-phoneWhite;
     }
 
     &.fb::before {
-      background-image: url(../img/fa-fb.svg);
+      @apply bg-fb dark:bg-fbWhite;
+    }
+
+    &.ig::before {
+      @apply bg-ig dark:bg-igWhite;
     }
   }
 </style>
 
-<address class="flex flex-col items-start gap-y-2 md:gap-y-4">
+<address>
   <div class="icon location">
     <span class="block">{contact.address.street}</span>
     <span
@@ -64,6 +54,9 @@ import contact from '../data/contact.mjs';
   <a class="icon envelope" href={`mailto:${contact.email}`}>{contact.email}</a>
   <a class="icon fb" href={contact.facebook.full}
     >facebook.com/{contact.facebook.id}</a
+  >
+  <a class="icon ig" href={contact.instagram.full}
+    >instagram.com/{contact.instagram.id}</a
   >
   <a class="icon phone" href={`tel:${contact.phone.Frank}`}
     >{contact.phone.Frank}</a
