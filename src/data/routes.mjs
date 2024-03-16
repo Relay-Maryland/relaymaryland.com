@@ -6,8 +6,8 @@
 export default [
   { '/': 'Home' },
   { '/about': 'About' },
-  { '/news': 'News' },
   { '/hall': 'Town Hall' },
   { '/resources': 'Resources' },
+  { '/news': 'News' },
   { '/ria': 'RIA' }
 ];
