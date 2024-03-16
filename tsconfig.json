@@ -1,3 +1,9 @@
 {
-  "extends": "astro/tsconfigs/base"
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    // Enable TypeScript for Astro Content Collections
+    "strictNullChecks": true,
+    // Enable IntelliSense and type checking in .js and .mjs files
+    "allowJs": true
+  }
 }
