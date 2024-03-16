@@ -85,6 +85,12 @@
       @apply ml-[2px] md:ml-1 px-4 py-3 md:px-6 md:py-4 rounded-r;
       @apply bg-gray-500 dark:bg-gray-200;
 
+      h3 {
+        @apply m-0 mb-auto;
+        @apply text-base sm:text-xl md:text-2xl font-bold;
+        @apply leading-none sm:leading-none md:leading-none;
+      }
+
       > div > div > p:last-of-type {
         @apply mb-0;
       }

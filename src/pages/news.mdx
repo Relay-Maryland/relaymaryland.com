@@ -5,7 +5,7 @@ title: News and Events
 
 import { getCollection } from 'astro:content';
 import { filterByDays } from '../utils.mjs';
-import CalendarFeed from '../components/CalendarFeed.astro';
+import CalendarFeed from '../components/CalendarFeed/Feed.astro';
 import NewsFeed from '../components/NewsFeed.astro';
 
 export const calEntries = await getCollection(

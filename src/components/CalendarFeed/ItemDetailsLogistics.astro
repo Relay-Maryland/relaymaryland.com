@@ -1,0 +1,14 @@
+---
+interface Props {
+  time?: string;
+  location?: string;
+}
+const { time, location } = Astro.props;
+const showMiddot = time && location;
+---
+
+<div class="flex">
+  {time ? <time>{time}</time> : null}
+  {showMiddot ? <span class="mx-2">&middot;</span> : null}
+  {location ? <div>{location}</div> : null}
+</div>
