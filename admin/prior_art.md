@@ -21,3 +21,4 @@
 - weird list of open Tailwind components, https://blog.logrocket.com/10-best-tailwind-css-component-libraries/
 - https://daisyui.com/
 - https://www.hyperui.dev/
+- calendar feed from searching `Event Listing !dribbble`, https://dribbble.com/shots/23036561-Daily-UI-070-Event-Listing, see './prior-art-calendar-feed-dribbble.png'.

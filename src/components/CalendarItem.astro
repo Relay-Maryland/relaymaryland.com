@@ -1,0 +1,10 @@
+---
+import CalendarItemDate from './CalendarItemDate.astro';
+import CalendarItemDetails from './CalendarItemDetails.astro';
+const { entry } = Astro.props;
+---
+
+<div class="flex gap-x-4 md:gap-x-6">
+  <CalendarItemDate date={entry.data.date} />
+  <CalendarItemDetails entry={entry} />
+</div>

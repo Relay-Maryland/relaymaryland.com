@@ -1,0 +1,26 @@
+---
+layout: ../layouts/NewsPageLayout.astro
+title: News and Events
+---
+
+import { getCollection } from 'astro:content';
+import { filterByDays } from '../utils.mjs';
+import CalendarFeed from '../components/CalendarFeed.astro';
+import NewsFeed from '../components/NewsFeed.astro';
+
+export const calEntries = await getCollection(
+  'calendar',
+  (entry) => !filterByDays(entry.data.date)
+);
+export const newsEntries = await getCollection(
+  'news',
+  (entry) => !filterByDays(entry.data.date)
+);
+
+## Calendar
+
+<CalendarFeed entries={calEntries}/>
+
+## News
+
+<NewsFeed entries={newsEntries}/>

@@ -1,0 +1,16 @@
+---
+import NewsPageItem from './NewsItem.astro';
+const { collection, entries } = Astro.props;
+---
+
+<ol data-collection={collection}>
+  {
+    entries.map((entry) => (
+      <li>
+        <article>
+          <NewsPageItem entry={entry} />
+        </article>
+      </li>
+    ))
+  }
+</ol>

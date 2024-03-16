@@ -1,0 +1,16 @@
+---
+import CalendarItem from './CalendarItem.astro';
+const { entries } = Astro.props;
+---
+
+<ol data-collection="calendar">
+  {
+    entries.map((entry) => (
+      <li>
+        <article>
+          <CalendarItem entry={entry} />
+        </article>
+      </li>
+    ))
+  }
+</ol>
