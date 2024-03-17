@@ -1,14 +1,14 @@
 ---
-import NewsPageItem from './NewsItem.astro';
-const { collection, entries } = Astro.props;
+import NewsItem from './NewsItem.astro';
+const { entries } = Astro.props;
 ---
 
-<ol data-collection={collection}>
+<ol data-collection="news">
   {
     entries.map((entry) => (
-      <li>
+      <li class="box-shadow">
         <article>
-          <NewsPageItem entry={entry} />
+          <NewsItem entry={entry} />
         </article>
       </li>
     ))

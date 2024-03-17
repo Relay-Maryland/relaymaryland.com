@@ -11,6 +11,43 @@
 :root {
   --red: #df2935;
   --yellow: #fdca40;
+
+  /* Shadows via https://www.joshwcomeau.com/shadow-palette/
+     Light based on gray-500, dark based on gray-200;
+   */
+  --shadow-color-light: 240deg 3% 56%;
+  --shadow-elevation-low-light: 0.3px 0.5px 0.7px
+      hsl(var(--shadow-color-light) / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color-light) / 0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color-light) / 0.34);
+  --shadow-elevation-medium-light: 0.3px 0.5px 0.7px
+      hsl(var(--shadow-color-light) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color-light) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color-light) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color-light) / 0.36);
+
+  --shadow-color-dark: 226deg 22% 6%;
+  --shadow-elevation-low-dark: 0.3px 0.5px 0.7px
+      hsl(var(--shadow-color-dark) / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color-dark) / 0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color-dark) / 0.34);
+  --shadow-elevation-medium-dark: 0.3px 0.5px 0.7px
+      hsl(var(--shadow-color-dark) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color-dark) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color-dark) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color-dark) / 0.36);
+}
+
+.box-shadow {
+  box-shadow: var(--shadow-elevation-low-light);
+
+  @media (prefers-color-scheme: dark) {
+    box-shadow: var(--shadow-elevation-medium-dark);
+  }
+}
+
+.all-small-caps {
+  font-variant-caps: all-small-caps;
 }
 
 [data-heroblurb] {
@@ -72,7 +109,7 @@
 
   [data-collection='calendar'] {
     > li {
-      @apply relative mb-4 md:mb-6;
+      @apply relative mb-4 md:mb-6 rounded;
     }
     > li::before {
       content: '';
@@ -93,6 +130,17 @@
 
       > div > div > p:last-of-type {
         @apply mb-0;
+      }
+    }
+  }
+
+  [data-collection='news'] {
+    > li {
+      @apply mb-6 md:mb-8 p-4 md:p-6 rounded;
+      @apply bg-gray-500 dark:bg-gray-200;
+
+      > article > h3:first-child {
+        @apply mt-0;
       }
     }
   }

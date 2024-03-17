@@ -6,7 +6,7 @@ const { entries } = Astro.props;
 <ol data-collection="calendar">
   {
     entries.map((entry) => (
-      <li>
+      <li class="box-shadow">
         <article>
           <CalendarItem entry={entry} />
         </article>
