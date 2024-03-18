@@ -1,8 +1,19 @@
 ---
+import { relayDate } from '../utils.mjs';
+
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+const d = relayDate(entry.data.date);
+const dt = d.toISOString().slice(0, 10);
+const _d = new Intl.DateTimeFormat('en-US', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC' // hack around the time zone rabbit hole
+}).format(d);
 ---
 
-<time class="text-sm md:text-base all-small-caps">March 3, 2024</time>
+<time datetime={dt} class="text-sm md:text-base all-small-caps">{_d}</time>
 
 <Content />
