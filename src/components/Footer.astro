@@ -21,8 +21,8 @@ const rts = routes.map((route) => Object.entries(route)[0]);
 </style>
 
 <footer class="container">
-  <p class="text-lg font-bold">Relay Improvement Association</p>
-  <nav class="flex flex-col gap-y-5">
+  <h2 class="text-lg lg:text-2xl font-bold">Relay, Maryland</h2>
+  <nav class="mb-4 flex flex-col gap-y-5">
     <div class="flex flex-wrap justify-center gap-x-6">
       {rts.map(([path, title]) => <a href={path}>{title}</a>)}
     </div>
@@ -32,4 +32,5 @@ const rts = routes.map((route) => Object.entries(route)[0]);
       <a href={contact.github}><SvgGitHub /></a>
     </div>
   </nav>
+  <p class="text-xs">© 2024 Relay Improvement Association</p>
 </footer>
