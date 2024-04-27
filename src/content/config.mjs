@@ -16,7 +16,8 @@ const newsCollection = defineCollection({
   type: 'content',
   schema: z.object({
     date: z.coerce.date(),
-    title: z.string()
+    title: z.string(),
+    blurb: z.string().optional()
   })
 });
 

@@ -27,11 +27,14 @@ const _d = new Intl.DateTimeFormat('en-US', {
     @apply bg-gray-500 dark:bg-gray-200 rounded;
 
     h3 {
-      @apply text-xl md:text-2xl;
+      @apply text-xl md:text-2xl font-bold;
+      @apply mt-2 mb-3 lg:mt-3;
+      /* @apply mt-3 mb-5; */
     }
 
     p:last-of-type {
       @apply mb-0;
+      font-variant-caps: all-small-caps;
 
       &::after {
         /* via GitHub marketing style for `a.link-mktg` */
@@ -86,6 +89,8 @@ const _d = new Intl.DateTimeFormat('en-US', {
   >
 
   <h3 class="m-0 transition">{entry.data.title}</h3>
+
+  {entry.data.blurb ? <p>{entry.data.blurb}</p> : ''}
 
   <p class="relative inline-block text-sm md:text-base text-current">
     Read more <span class="arrow">→</span>

@@ -1,5 +1,4 @@
 ---
-// The idea here is to show the 3 most recent items for each feed
 import { getCollection } from 'astro:content';
 
 import CalendarItem from '../CalendarFeed/Item.astro';
@@ -7,11 +6,6 @@ import NewsItem from './NewsItem.astro';
 
 const calEntries = await getCollection('calendar');
 const newsEntries = await getCollection('news');
-// const newsEntries = await getCollection('news', ({ data }) => {
-//   console.log('YO!', data);
-//   return true;
-// });
-console.log('YO!', newsEntries);
 
 const sortedCalEntries = calEntries.sort((a, b) => {
   return new Date(b.data.date) - new Date(a.data.date);

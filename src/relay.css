@@ -72,8 +72,8 @@
     @apply text-2xl md:text-3xl sm:font-bold;
   }
   h3 {
-    @apply mt-3 mb-5;
-    @apply text-xl sm:text-2xl sm:font-bold;
+    @apply mt-2 mb-3 lg:mt-3;
+    @apply text-xl sm:text-2xl font-bold;
   }
   p {
     @apply mb-3 md:mb-4 max-w-[80ch];

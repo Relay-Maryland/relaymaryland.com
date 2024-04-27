@@ -1,6 +1,7 @@
 ---
 date: 2024-03-01
 title: Petition Signing
+blurb: We invite you to sign a Petition opposing CZMP 1-008 & 1-009
 ---
 
 ## Petition Signing-March 17th 4-7pm

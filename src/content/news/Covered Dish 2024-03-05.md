@@ -1,9 +1,8 @@
 ---
 date: 2024-03-05
-title: Covered Dish
+title: '[Covered Dish] Sun 17 MAR | 4-7pm | 1710 Arlington Ave | Relay Town Hall'
+blurb: Bring your favorite Irish dish
 ---
-
-## {Covered Dish} Sun 17 MAR | 4-7pm | 1710 Arlington Ave | Relay Town Hall
 
 ![Covered dish flyer](../../img/covered-dish.png)
 

@@ -87,6 +87,8 @@ const _d = new Intl.DateTimeFormat('en-US', {
 
   <h3 class="m-0 transition">{entry.data.title}</h3>
 
+  {entry.data.blurb ? <p>{entry.data.blurb}</p> : ''}
+
   <p class="relative inline-block text-sm md:text-base text-current">
     Read more <span class="arrow">→</span>
   </p>
