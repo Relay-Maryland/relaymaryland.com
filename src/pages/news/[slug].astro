@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+
+import NewsPostLayout from '../../layouts/NewsPostLayout.astro';
+
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const newsEntries = await getCollection('news');
+  return newsEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry }
+  }));
+}
+// 2. For your template, you can get the entry directly from the prop
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<NewsPostLayout title={entry.data.title} date={entry.data.date}>
+  <Content />
+</NewsPostLayout>

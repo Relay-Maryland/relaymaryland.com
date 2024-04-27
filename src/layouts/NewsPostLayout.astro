@@ -1,0 +1,65 @@
+---
+import { relayDate } from '../utils.mjs';
+
+import BaseLayout from './BaseLayout.astro';
+import GlobalNav from '../components/Nav.astro';
+import GlobalFooter from '../components/Footer.astro';
+
+const { title, date } = Astro.props.frontmatter || Astro.props;
+
+const d = relayDate(date);
+const dt = d.toISOString().slice(0, 10);
+const _d = new Intl.DateTimeFormat('en-US', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC' // hack around the time zone rabbit hole
+}).format(d);
+---
+
+<style>
+  main {
+    @apply w-full max-w-screen-md mx-auto px-3 sm:px-4;
+  }
+
+  nav > a {
+    @apply text-red dark:text-yellow;
+    @apply transition hover:text-black dark:hover:text-red hover:underline;
+  }
+
+  hr {
+    @apply mt-2 mb-3 md:mt-4 md:mb-6 h-0 sm:h-1;
+    @apply border-red bg-red;
+    @apply dark:border-yellow dark:bg-yellow;
+  }
+</style>
+
+<BaseLayout title={title}>
+  <GlobalNav />
+
+  <main>
+    <header>
+      <nav class="mb-4 flex">
+        <a href="/news">← More news</a>
+      </nav>
+      <h1 class="mb-3 text-2xl sm:text-3xl md:text-4xl font-bold sm:text-left">
+        {title}
+      </h1>
+      <time datetime={dt} class="text-sm md:text-base all-small-caps">{_d}</time
+      >
+    </header>
+    <hr />
+    <article data-prose>
+      <slot />
+    </article>
+    <!-- PUNTING ON GENERATING Prev/Next links, Astro docs don't address this -->
+    <!-- <footer class="mt-8 lg:mt-12">
+      <nav class="flex justify-between">
+        <a href="#">← Previous post</a>
+        <a href="#">Next post →</a>
+      </nav>
+    </footer> -->
+  </main>
+
+  <GlobalFooter />
+</BaseLayout>

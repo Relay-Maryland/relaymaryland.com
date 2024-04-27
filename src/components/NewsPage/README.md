@@ -1,0 +1,1 @@
+THIS DIR STARTED OUT AS A copy of ../HomeNewsSection/, the news components and layouts are a mess! But don't have time to clean it up before launch, so am not abstracting it right now and just copying and modifying it.

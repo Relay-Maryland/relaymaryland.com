@@ -94,7 +94,7 @@
     @apply transition hover:text-black dark:hover:text-red;
   }
   img {
-    @apply my-6 md:my-8;
+    @apply my-6 md:my-8 mx-auto;
   }
 
   [data-collection='calendar'],
@@ -110,16 +110,11 @@
   [data-collection='calendar'] {
     > li {
       @apply relative mb-4 md:mb-6 rounded;
+      @apply box-shadow border-l-2 md:border-l-4 border-l-red dark:border-l-yellow;
     }
-    > li::before {
-      content: '';
-      @apply absolute inset-y-0 left-0 w-[2px] md:w-1;
-      @apply rounded-s;
-      @apply bg-gradient-to-br to-[128%] md:to-[98%];
-      @apply from-red to-yellow dark:from-yellow dark:to-red;
-    }
+
     article {
-      @apply ml-[2px] md:ml-1 px-4 py-3 md:px-6 md:py-4 rounded-r;
+      @apply px-4 py-3 md:px-6 md:py-4 rounded-r;
       @apply bg-gray-500 dark:bg-gray-200;
 
       h3 {
@@ -137,7 +132,6 @@
   [data-collection='news'] {
     > li {
       @apply mb-6 md:mb-8 p-4 md:p-6 rounded;
-      @apply bg-gray-500 dark:bg-gray-200;
 
       > article > h3:first-child {
         @apply mt-0;

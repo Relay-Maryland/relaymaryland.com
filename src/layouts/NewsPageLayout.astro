@@ -1,11 +1,37 @@
 ---
-import PageLayout from './PageLayout.astro';
+import BaseLayout from './BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import News from '../components/NewsPage/Index.astro';
 
 const { title } = Astro.props.frontmatter || Astro.props;
 ---
 
-<PageLayout title={title}>
-  <div data-prose>
-    <slot />
-  </div>
-</PageLayout>
+<style>
+  main {
+    /* @apply w-full max-w-screen-md mx-auto px-3 sm:px-4; */
+    > header {
+      @apply w-full max-w-screen-md lg:max-w-screen-xl mx-auto px-4 lg:px-6;
+    }
+  }
+
+  hr {
+    @apply mt-2 mb-3 md:mt-4 md:mb-6 h-0 sm:h-1;
+    @apply border-red bg-red;
+    @apply dark:border-yellow dark:bg-yellow;
+  }
+</style>
+
+<BaseLayout title={title}>
+  <Nav />
+  <main>
+    <header>
+      <h1 class="text-3xl md:text-4xl font-bold text-center">
+        {title}
+      </h1>
+      <hr />
+    </header>
+    <News />
+  </main>
+  <Footer />
+</BaseLayout>

@@ -5,35 +5,41 @@ const park = 'https://dnr.maryland.gov/publiclands/Pages/central/patapsco.aspx';
 
 <style>
   .text-overlay {
-    @apply w-full md:w-4/5 lg:w-3/4 xl:w-2/3 max-w-screen-lg;
-    @apply px-8 py-8 md:p-6 lg:p-8 md:rounded-lg;
+    @apply w-11/12 xs:w-10/12 md:w-4/5 lg:w-3/4 xl:w-2/3 max-w-screen-lg;
+    @apply p-6 lg:p-8 rounded-lg;
     @apply flex flex-col md:grid grid-cols-12 gap-x-10 gap-y-6 md:gap-y-8;
-    @apply bg-blue md:bg-[#000000] md:bg-opacity-70;
+    @apply bg-redYellowGradient md:bg-none md:bg-[#000] md:bg-opacity-70;
   }
   li {
     @apply flex gap-1 md:gap-2 lg:gap-3 mb-2 lg:mb-3;
     @apply leading-tight;
+    @apply relative;
+    @apply ml-6 lg:ml-8;
   }
   li::before {
-    content: '✓';
-    @apply mr-1 md:mr-0;
-    @apply text-white;
+    content: '';
+    @apply -left-6 lg:-left-8 top-[1px] lg:top-[2px];
+    @apply w-5 h-5 lg:w-6 lg:h-6;
+    @apply absolute inline-block;
+    @apply bg-checkCircle md:bg-checkCircleWhite bg-no-repeat;
   }
   li:last-child {
     @apply mb-0;
   }
   a {
-    @apply text-white underline;
-    @apply transition hover:text-red;
+    @apply text-black md:text-white underline;
+    @apply transition hover:text-blue md:hover:text-red;
   }
 </style>
 
 <div class="text-overlay">
-  <h2 class="col-span-12 text-2xl md:text-3xl lg:text-4xl font-bold text-white">
+  <h2
+    class="col-span-12 text-2xl md:text-3xl lg:text-4xl font-bold text-black md:text-white"
+  >
     A vibrant destination...
   </h2>
   <div
-    class="order-2 lg:order-1 col-span-12 lg:col-span-7 text-white md:text-lg lg:text-xl/[30px] flex flex-col gap-3 md:gap-4"
+    class="order-2 lg:order-1 col-span-12 lg:col-span-7 text-black md:text-white md:text-lg lg:text-xl/[30px] flex flex-col gap-3 md:gap-4"
   >
     <p>
       Located in the Patapsco River Valley, Relay and St. Denis are rich in
@@ -55,7 +61,7 @@ const park = 'https://dnr.maryland.gov/publiclands/Pages/central/patapsco.aspx';
     </p>
   </div>
   <ul
-    class="order-1 lg:order-2 col-span-12 lg:col-span-5 md:text-lg lg:text-xl text-white"
+    class="order-1 lg:order-2 col-span-12 lg:col-span-5 md:text-lg lg:text-xl text-black md:text-white"
   >
     <li>Well-preserved residential architecture</li>
     <li>Tradition of activism and community engagement</li>

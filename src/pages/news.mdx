@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/NewsPageLayout.astro
-title: News and Events
+title: News and Calendar
 ---
 
 import { getCollection } from 'astro:content';
@@ -12,10 +12,7 @@ export const calEntries = await getCollection(
   'calendar',
   (entry) => !filterByDays(entry.data.date)
 );
-export const newsEntries = await getCollection(
-  'news',
-  (entry) => !filterByDays(entry.data.date)
-);
+export const newsEntries = await getCollection('news');
 
 ## Calendar
 
