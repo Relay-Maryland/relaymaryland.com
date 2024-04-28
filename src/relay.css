@@ -96,9 +96,6 @@
   img {
     @apply my-6 md:my-8 mx-auto;
   }
-  object[type='application/pdf'] {
-    @apply w-full min-h-[80dvh];
-  }
 
   [data-collection='calendar'],
   [data-collection='news'] {

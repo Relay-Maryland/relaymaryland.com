@@ -4,8 +4,8 @@ title: Relay Improvement Association
 ---
 
 import RIAContact from '../components/RIAContact.astro';
-import PDFEmbed from '../components/PDFEmbed.astro';
-import latestNewsletter from '../data/newsletters/NL_VOL_24_01_FEB.pdf'
+import NewsletterPDFEmbed from '../components/NewsletterPDFEmbed.astro';
+import latestNewsletter from '../../content/latest-newsletter.json';
 
 ## Contact
 
@@ -61,4 +61,4 @@ The RIA Officers consist of a President, Vice-President, Secretary, and Treasure
 
 ## Newsletter
 
-<PDFEmbed file={latestNewsletter} />
+<NewsletterPDFEmbed file={latestNewsletter.url} />
