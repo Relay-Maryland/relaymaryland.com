@@ -3,7 +3,6 @@
  */
 export default {
   email: 'RelayTownHall@gmail.com',
-  phone: { Frank: '703-300-2351' },
   address: {
     street: 'P.O. Box 24046',
     city: 'Relay',
