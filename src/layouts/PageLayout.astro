@@ -1,30 +1,18 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import Nav from '../components/Nav.astro';
-import Footer from '../components/Footer.astro';
+import Nav from '../components/SiteHeader/Nav.astro';
+import Footer from '../components/SiteFooter/Footer.astro';
 
 const { title } = Astro.props.frontmatter || Astro.props;
 ---
 
-<style>
-  main {
-    @apply w-full max-w-screen-md mx-auto px-3 sm:px-4;
-  }
-
-  hr {
-    @apply mt-2 mb-3 md:mt-4 md:mb-6 h-0 sm:h-1;
-    @apply border-red bg-red;
-    @apply dark:border-yellow dark:bg-yellow;
-  }
-</style>
-
 <BaseLayout title={title}>
   <Nav />
-  <main>
+  <main class="w-full max-w-screen-md mx-auto px-3 sm:px-4">
     <h1 class="text-3xl md:text-4xl font-bold text-center sm:text-left">
       {title}
     </h1>
-    <hr />
+    <hr class="page-hr" />
     <slot />
   </main>
   <Footer />

@@ -1,0 +1,72 @@
+---
+import { relayDate } from '../../utils.mjs';
+
+const { entry } = Astro.props;
+
+const d = relayDate(entry.data.date);
+const dt = d.toISOString().slice(0, 10);
+const _d = new Intl.DateTimeFormat('en-US', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  timeZone: 'UTC' // hack around the time zone rabbit hole
+}).format(d);
+---
+
+<style>
+  a {
+    @apply block relative text-black hover:text-black dark:text-dmWhite hover:dark:text-dmWhite transition no-underline;
+    @apply py-4 px-6;
+    @apply bg-gray-500 dark:bg-gray-200 rounded;
+
+    p:last-of-type {
+      @apply mb-0;
+      font-variant-caps: all-small-caps;
+
+      &::after {
+        /* via GitHub marketing style for `a.link-mktg` */
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: calc(100% - 1em);
+        height: 2px;
+        pointer-events: none;
+        background-color: currentColor;
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    &:hover {
+      @apply bg-_blue-900 text-[#000] dark:bg-gray-250 dark:text-[#fff];
+      @apply bottom-[1px] transition;
+
+      p:last-of-type::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+</style>
+
+<a
+  class="box-shadow border-l-2 md:border-l-4 border-l-blue dark:border-l-red"
+  href={`/news/${entry.slug}`}
+>
+  <time datetime={dt} class="text-sm md:text-base all-small-caps text-current"
+    >{_d}</time
+  >
+
+  <h3 class="mt-2 mb-3 lg:mt-3 text-xl md:text-2xl font-bold transition">
+    {entry.data.title}
+  </h3>
+
+  {entry.data.blurb ? <p class="max-w-[80ch] mb-4 ">{entry.data.blurb}</p> : ''}
+
+  <p
+    class="relative inline-block text-sm md:text-base all-small-caps text-current"
+  >
+    Read more →
+  </p>
+</a>

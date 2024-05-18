@@ -1,0 +1,8 @@
+[
+  { "/": "Home" },
+  { "/about": "About" },
+  { "/hall": "Town Hall" },
+  { "/resources": "Resources" },
+  { "/news": "News" },
+  { "/ria": "RIA" }
+]

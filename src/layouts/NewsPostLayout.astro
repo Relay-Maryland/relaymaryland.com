@@ -2,8 +2,8 @@
 import { relayDate } from '../utils.mjs';
 
 import BaseLayout from './BaseLayout.astro';
-import GlobalNav from '../components/Nav.astro';
-import GlobalFooter from '../components/Footer.astro';
+import GlobalNav from '../components/SiteHeader/Nav.astro';
+import GlobalFooter from '../components/SiteFooter/Footer.astro';
 
 const { title, date } = Astro.props.frontmatter || Astro.props;
 
@@ -17,30 +17,16 @@ const _d = new Intl.DateTimeFormat('en-US', {
 }).format(d);
 ---
 
-<style>
-  main {
-    @apply w-full max-w-screen-md mx-auto px-3 sm:px-4;
-  }
-
-  nav > a {
-    @apply text-red dark:text-yellow;
-    @apply transition hover:text-black dark:hover:text-red hover:underline;
-  }
-
-  hr {
-    @apply mt-2 mb-3 md:mt-4 md:mb-6 h-0 sm:h-1;
-    @apply border-red bg-red;
-    @apply dark:border-yellow dark:bg-yellow;
-  }
-</style>
-
 <BaseLayout title={title}>
   <GlobalNav />
 
-  <main>
+  <main class="w-full max-w-screen-md mx-auto px-3 sm:px-4">
     <header>
       <nav class="mb-4 flex">
-        <a href="/news">← More news</a>
+        <a
+          class="text-red dark:text-yellow transition hover:text-black dark:hover:text-red hover:underline"
+          href="/news">← More news</a
+        >
       </nav>
       <h1 class="mb-3 text-2xl sm:text-3xl md:text-4xl font-bold sm:text-left">
         {title}
@@ -48,7 +34,7 @@ const _d = new Intl.DateTimeFormat('en-US', {
       <time datetime={dt} class="text-sm md:text-base all-small-caps">{_d}</time
       >
     </header>
-    <hr />
+    <hr class="page-hr" />
     <article data-prose>
       <slot />
     </article>

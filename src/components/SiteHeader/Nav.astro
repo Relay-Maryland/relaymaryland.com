@@ -1,0 +1,28 @@
+---
+import routes from '../../data/routes.json';
+
+import NavBrand from './NavBrand.astro';
+import NavLink from './NavLink.astro';
+
+const nonHomeRoutes = routes.filter((route) => !Object.hasOwn(route, '/'));
+---
+
+<style>
+  nav {
+    @apply mb-4 lg:mb-8 py-4 sm:py-5;
+    @apply flex flex-col gap-y-1 sm:gap-y-0 sm:flex-row justify-between items-center;
+  }
+
+  div {
+    @apply mx-auto sm:mx-0;
+    @apply flex justify-center items-center flex-wrap gap-1;
+  }
+</style>
+
+<nav class="container">
+  <NavBrand />
+
+  <div>
+    {nonHomeRoutes.map((route) => <NavLink route={route} />)}
+  </div>
+</nav>

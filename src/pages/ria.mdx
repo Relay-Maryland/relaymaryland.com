@@ -3,9 +3,10 @@ layout: ../layouts/MarkdownPageLayout.astro
 title: Relay Improvement Association
 ---
 
-import RIAContact from '../components/RIAContact.astro';
-import NewsletterPDFEmbed from '../components/NewsletterPDFEmbed.astro';
-import latestNewsletter from '../../content/latest-newsletter.json';
+import RIAContact from '../components/RIAPage/RIAContact.astro';
+import CheddarUpPayBtn from '../components/RIAPage/CheddarUpPayButton.astro';
+import PDFEmbed from '../components/MediaEmbeds/GoogleDrivePDFEmbed.astro';
+import { url as latestNewsletter } from '../data/latest-newsletter.json';
 
 ## Contact
 
@@ -15,14 +16,14 @@ import latestNewsletter from '../../content/latest-newsletter.json';
 
 The Relay Improvement Association of Baltimore County, Inc. (RIA) is a Maryland non-profit, non-stock, non-sectarian, non-political organization whose purpose is to promote the improvement and general welfare of the neighborhoods within the following boundaries. Boundaries are the Patapsco River to the South, Route 1 and Herbert Run to the East, I-95 to the North, and Selford Avenue above I-95 to the West, including homes on both sides of Gun Road to the State Park property line
 
-<img width="513" alt="image" src="https://github.com/Relay-Maryland/relaymaryland.com/assets/11720131/29bb0731-f27c-4664-a8ed-8fc331e44eea"/>
+![Map showing the boundaries of the Relay and St. Denis community](https://github.com/Relay-Maryland/relaymaryland.com/assets/11720131/29bb0731-f27c-4664-a8ed-8fc331e44eea)
 
 ## Membership
 
 Become a member!
 
 Sign up for RIA membership and make a donation to support the town hall maintenance through our online portal via Cheddar Up:
-<a href="https://my.cheddarup.com/c/ria-yearly-membership-dues" rel="noopener noreferrer" target="_blank"><img alt="Pay with Cheddar Up" style="width:auto;height:auto;max-width:172px" width="auto" height="auto" src="https://my.cheddarup.com/assets/CheddarUpPay-9b60c97e.svg"/></a>
+<CheddarUpPayBtn />
 
 An RIA Member is any person over eighteen (18) years of age (i) residing within the boundaries defined or (ii) owning real property within such boundaries, and who has paid dues to the Association for the current year.
 
@@ -61,4 +62,4 @@ The RIA Officers consist of a President, Vice-President, Secretary, and Treasure
 
 ## Newsletter
 
-<NewsletterPDFEmbed file={latestNewsletter.url} />
+<PDFEmbed file={latestNewsletter} />

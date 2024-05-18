@@ -38,16 +38,33 @@
     5px 10px 12.6px -2.5px hsl(var(--shadow-color-dark) / 0.36);
 }
 
-.box-shadow {
-  box-shadow: var(--shadow-elevation-low-light);
-
-  @media (prefers-color-scheme: dark) {
-    box-shadow: var(--shadow-elevation-medium-dark);
-  }
-}
-
 .all-small-caps {
   font-variant-caps: all-small-caps;
+}
+
+.more-link {
+  &::after {
+    /* via GitHub marketing style for `a.link-mktg` */
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: calc(100% - 1em);
+    height: 2px;
+    pointer-events: none;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    @apply text-red dark:text-yellow;
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
 }
 
 [data-heroblurb] {
@@ -96,53 +113,25 @@
   img {
     @apply my-6 md:my-8 mx-auto;
   }
-
-  [data-collection='calendar'],
-  [data-collection='news'] {
-    @apply list-none pl-0;
-
-    > li:last-of-type,
-    > li > article > p:last-of-type {
-      @apply mb-0;
-    }
-  }
-
-  [data-collection='calendar'] {
-    > li {
-      @apply relative mb-4 md:mb-6 rounded;
-      @apply box-shadow border-l-2 md:border-l-4 border-l-red dark:border-l-yellow;
-    }
-
-    article {
-      @apply px-4 py-3 md:px-6 md:py-4 rounded-r;
-      @apply bg-gray-500 dark:bg-gray-200;
-
-      h3 {
-        @apply m-0 mb-auto;
-        @apply text-base sm:text-xl md:text-2xl font-bold;
-        @apply leading-none sm:leading-none md:leading-none;
-      }
-
-      > div > div > p:last-of-type {
-        @apply mb-0;
-      }
-    }
-  }
-
-  [data-collection='news'] {
-    > li {
-      @apply mb-6 md:mb-8 p-4 md:p-6 rounded;
-
-      > article > h3:first-child {
-        @apply mt-0;
-      }
-    }
-  }
 }
 
 @layer components {
   .container {
     @apply w-full max-w-screen-xl mx-auto;
     @apply px-4 lg:px-5;
+  }
+
+  .page-hr {
+    @apply mt-2 mb-3 md:mt-4 md:mb-6 h-0 sm:h-1;
+    @apply border-red bg-red;
+    @apply dark:border-yellow dark:bg-yellow;
+  }
+
+  .box-shadow {
+    box-shadow: var(--shadow-elevation-low-light);
+
+    @media (prefers-color-scheme: dark) {
+      box-shadow: var(--shadow-elevation-medium-dark);
+    }
   }
 }

@@ -1,0 +1,17 @@
+---
+import FeedSection from './Section.astro';
+const { newsEntries, calEntries } = Astro.props;
+---
+
+<style>
+  div {
+    @apply w-full max-w-screen-md lg:max-w-screen-xl mx-auto px-4 lg:px-6;
+    @apply grid grid-cols-12 gap-x-4 lg:gap-x-8 gap-y-8 lg:gap-y-14;
+  }
+</style>
+
+<div>
+  <FeedSection type="news" entries={newsEntries} />
+  <FeedSection type="calendar" entries={calEntries} />
+  <slot />
+</div>

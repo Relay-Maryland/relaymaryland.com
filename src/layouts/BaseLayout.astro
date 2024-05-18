@@ -16,19 +16,9 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body
+    class="min-h-dvh flex flex-col bg-white dark:bg-dmBlack text-black dark:text-dmWhite"
+  >
     <slot />
   </body>
 </html>
-
-<style>
-  /* Styles below html because Prettier removes the !doctype when style block
-     is above it, then things in Astro get wonky on pages where markdown
-     is imported. Astro also has a problem watching changes to the layout file
-     when on a wonky page. */
-  body {
-    @apply min-h-dvh flex flex-col;
-    @apply bg-white dark:bg-dmBlack;
-    @apply text-black dark:text-dmWhite;
-  }
-</style>

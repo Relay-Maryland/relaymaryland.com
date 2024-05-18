@@ -1,0 +1,48 @@
+---
+import CalendarItem from './Calendar/Item.astro';
+import NewsItem from './NewsItem.astro';
+const { type, entries } = Astro.props;
+const Item = type === 'news' ? NewsItem : CalendarItem;
+---
+
+<style>
+  [data-collection='calendar'],
+  [data-collection='news'] {
+    @apply list-none pl-0;
+
+    > li:last-of-type,
+    > li > article > p:last-of-type {
+      @apply mb-0;
+    }
+  }
+
+  [data-collection='news'] {
+    > li {
+      @apply mb-6 md:mb-8 p-0 rounded;
+    }
+  }
+
+  [data-collection='calendar'] {
+    > li {
+      @apply relative mb-4 md:mb-6 rounded;
+      @apply box-shadow border-l-2 md:border-l-4 border-l-red dark:border-l-yellow;
+    }
+
+    article {
+      @apply px-4 py-3 md:px-6 md:py-4 rounded-r;
+      @apply bg-gray-500 dark:bg-gray-200;
+    }
+  }
+</style>
+
+<ol data-collection={type}>
+  {
+    entries.map((entry) => (
+      <li>
+        <article class="text-base md:text-lg">
+          <Item entry={entry} />
+        </article>
+      </li>
+    ))
+  }
+</ol>

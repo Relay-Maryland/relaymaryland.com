@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import NewsAndCalRoot from '../NewsAndCalendar/Root.astro';
+
+const calEntries = await getCollection('calendar');
+const newsEntries = await getCollection('news');
+
+const sortedCalEntries = calEntries.sort(
+  (a, b) => new Date(b.data.date) - new Date(a.data.date)
+);
+const sortedNewsEntries = newsEntries.sort(
+  (a, b) => new Date(b.data.date) - new Date(a.data.date)
+);
+---
+
+<section id="feeds" class="mb-4 pt-3">
+  <NewsAndCalRoot
+    newsEntries={sortedNewsEntries}
+    calEntries={sortedCalEntries}
+  />
+</section>

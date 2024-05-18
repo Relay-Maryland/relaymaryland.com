@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Nav from '../components/Nav.astro';
-import Hero from '../components/Hero.astro';
-import Feature1 from '../components/HomeCallOutWithImageSection/Index.astro';
-import Feature2 from '../components/HomeTextOnImageSection/Index.astro';
-import News from '../components/HomeNewsSection/Index.astro';
-import Footer from '../components/Footer.astro';
+import Nav from '../components/SiteHeader/Nav.astro';
+import Hero from '../components/HomePage/Hero.astro';
+import AboutRelay from '../components/HomePage/HomeCallOutWithImageSection/Root.astro';
+import VibrantDestination from '../components/HomePage/HomeTextOnImageSection/Root.astro';
+import NewsAndCalendar from '../components/HomePage/NewsAndCalendar/Root.astro';
+import Footer from '../components/SiteFooter/Footer.astro';
 
 const title = 'Welcome to Relay, Maryland';
 ---
@@ -14,9 +14,9 @@ const title = 'Welcome to Relay, Maryland';
   <Nav />
   <main>
     <Hero />
-    <Feature1 />
-    <Feature2 />
-    <News />
+    <AboutRelay />
+    <VibrantDestination />
+    <NewsAndCalendar />
   </main>
   <Footer />
 </BaseLayout>

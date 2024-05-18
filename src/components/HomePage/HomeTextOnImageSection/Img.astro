@@ -1,0 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import featureImg from '../../../img/swinging_bridge.jpg';
+---
+
+<picture class="hidden md:block absolute h-full w-full brightness-125 -z-10">
+  <Image
+    src={featureImg}
+    alt="Swinging bridge"
+    class="h-full w-full object-cover"
+  />
+</picture>

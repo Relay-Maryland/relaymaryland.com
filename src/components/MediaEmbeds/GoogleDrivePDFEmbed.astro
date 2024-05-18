@@ -1,0 +1,17 @@
+---
+const { file } = Astro.props;
+---
+
+<style>
+  iframe {
+    /* For some reason classes added to the class attribute of the iframe below
+    don't work. */
+    all: unset;
+    @apply w-full min-h-[80dvh] border-0;
+  }
+</style>
+
+<iframe
+  src={file}
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen=""></iframe>

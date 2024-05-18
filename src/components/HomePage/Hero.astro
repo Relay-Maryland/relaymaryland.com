@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+import heroImg from '../../img/hero-sign.jpg';
+import { Content as HeroCopy } from '../../data/homepage/hero.md';
+
+const heroImgDescription = 'Welcome sign at Relay, Maryland';
+const headline = 'Greetings from Relay and St. Denis!';
+---
+
+<style>
+  /* See src/relay.css for heroblurb style.
+     Heroblurb content is imported markdown, and adding styles here
+     doesn't work as expected -- the styles are not being applied to the 
+     output CSS; maybe Astro processes Tailwind before the markdown
+     so Tailwind can't see the markup needed to include CSS?
+  */
+</style>
+
+<section>
+  <div class="mx-auto max-w-screen-2xl px-3 sm:px-4 lg:px-5 xl:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+      <div class="relative z-10 lg:py-14">
+        <div class="relative h-[50dvh] lg:h-[66dvh]">
+          <Image
+            alt={heroImgDescription}
+            src={heroImg}
+            class="absolute inset-0 h-full w-full object-cover rounded-t-sm lg:rounded-md xl:rounded-lg"
+          />
+        </div>
+      </div>
+
+      <div
+        class="relative flex items-center justify-center bg-yellow rounded-b-sm lg:rounded-bl-none lg:rounded-r-md xl:rounded-r-lg"
+      >
+        <span
+          class="hidden lg:absolute lg:inset-y-0 lg:-start-20 lg:block lg:w-20 lg:bg-yellow rounded-b-sm lg:rounded-br-none lg:rounded-l-md xl:rounded-l-lg"
+        ></span><!-- The overlap on the left side under the hero image -->
+
+        <div class="lg:max-w-[42rem] p-6 md:p-10 lg:py-0">
+          <h2
+            class="mb-4 md:mb-6 text-3xl md:text-5xl font-bold text-black dark:text-dmBlack"
+          >
+            {headline}
+          </h2>
+
+          <div class="text-xl/[30px] md:text-2xl/[30px]" data-heroblurb>
+            <HeroCopy />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

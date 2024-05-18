@@ -1,0 +1,14 @@
+---
+import Feed from '../NewsAndCalendar/List.astro';
+const { type, entries } = Astro.props;
+const title = type === 'news' ? 'News' : 'Calendar';
+const newsClass = 'col-span-12 lg:col-span-8';
+const calClass = 'col-span-12 lg:col-span-4';
+---
+
+<section class={type === 'news' ? newsClass : calClass}>
+  <h2 class="mt-0 mb-6 text-center text-2xl md:text-3xl font-bold">
+    {title}
+  </h2>
+  <Feed type={type} entries={entries} />
+</section>
