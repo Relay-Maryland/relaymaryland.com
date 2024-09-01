@@ -37,12 +37,16 @@ Relay weekend comes into full swing on Friday, September 20th with Wine & Cheese
 September 22nd with RELAY DAY.
 Our format has changed slightly from past operations regarding Relay Day. This year we decided to focus on the buckets of activities and assign in advance a lead for these buckets. 
 
-Our leads this year are as follows:
+**Our leads this year are as follows:**
 
 JP Courneya: Communication lead
+
 Barbara McClung: Community based activities/outreach
+
 Joe Sherren & Ron Padron: Adult activities
+
 Food & Drinks: Ed Hardester
+
 Kids Activities & Setup/Breakdown: Frank Meek
 
 In the coming days & weeks you may be approached by these leads to assist in making Relay Day a success once again. If you have time, please consider volunteering and thank you in advance.
@@ -50,6 +54,9 @@ In the coming days & weeks you may be approached by these leads to assist in mak
 ### CALENDAR
 
 RIA General Meeting: Sept. 9th @ 7:30 Relay Town Hall
+
 Senior Coffee: Sept. 10th @ 10am-12pm Relay Town Hall
+
 Wine & Cheese: Sept. 20th Relay Town Hall
+
 Relay Day: Sept. 22nd 12pm-4pm Relay Town Hall
