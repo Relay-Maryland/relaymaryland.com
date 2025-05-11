@@ -10,4 +10,7 @@ See the project [wiki](https://github.com/Relay-Maryland/relaymaryland.com/wiki)
 - [Adding news posts](https://github.com/Relay-Maryland/relaymaryland.com/wiki/News-posts)
 - [Adding calendar posts](https://github.com/Relay-Maryland/relaymaryland.com/wiki/Calendar-posts)
 - [Customizable bits of content](https://github.com/Relay-Maryland/relaymaryland.com/wiki/Customizable-bits)
+
+## Learn more:
+
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/Relay-Maryland/relaymaryland.com)
