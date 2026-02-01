@@ -34,7 +34,7 @@ So here’s the good news! If you own a historic home in the Relay Historic Dist
 
 The State of Maryland’s Maryland Historic Trust offers its own tax credit program for an additional 20% rebate on your state income taxes, but they have their own application and review process.   See [https://mht.maryland.gov/Pages/funding/tax-credits-homeowner.aspx](https://mht.maryland.gov/Pages/funding/tax-credits-homeowner.aspx)
 
-### Preservation
+### Preservation Links
 
 - [Landmarks Preservation Commission](https://www.baltimorecountymd.gov/boards-commissions/planning/landmarks-preservation-commission) - reviews and approves plans for alterations to historic structures
 - [Maryland Inventory of Historic Properties](https://apps.mht.maryland.gov/mihp/MIHP.aspx) - includes information often used to determine if a property is eligible for designation as a Baltimore County Landmark
