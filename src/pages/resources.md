@@ -23,7 +23,7 @@ The good news is that many homes built after about 1930 will not need extensive 
 
 ### Minor Repairs
 
-If you are just repairing some minor issues like replacing some window trim or missing shingles, this does not need LPC review, as long as you “replace like with like”, i.e., replace rotten window trim with the same material in the same style.  If you’re not sure if your work is too large to be considered a repair rather than a renovation, contact the LPC staff to check.  They tend to be very responsive.  They can be contacted at: [histpres@baltimorecountymd.gov] or by phone at [410-887-3495](410-887-3495).
+If you are just repairing some minor issues like replacing some window trim or missing shingles, this does not need LPC review, as long as you “replace like with like”, i.e., replace rotten window trim with the same material in the same style.  If you’re not sure if your work is too large to be considered a repair rather than a renovation, contact the LPC staff to check.  They tend to be very responsive.  They can be contacted at: [histpres@baltimorecountymd.gov](histpres@baltimorecountymd.gov) or by phone at [410-887-3495](410-887-3495).
 
 ### What if I don’t get the LPC permits?
 
@@ -32,7 +32,7 @@ If you don’t get permission for major renovations, you could be hit with code 
 ### Historic Tax Credit
 So here’s the good news! If you own a historic home in the Relay Historic District, you may be able to get a tax credit for certain rehabilitation projects through Baltimore County.   This would mean 20% of your renovation costs rebated from your property tax bill.   This covers not only the exterior renovations noted above, but could also be applied for for interior renovations such as upgrades to your plumbing, electric, heating and cooling.   See their [Historic Rehabilitation Tax Credit](https://www.baltimorecountymd.gov/departments/planning/historic_preservation/taxcreditfaq.html) program to learn how to apply for the credit.
 
-The State of Maryland’s Maryland Historic Trust offers its own tax credit program for an additional 20% rebate on your state income taxes, but they have their own application and review process.   See [https://mht.maryland.gov/Pages/funding/tax-credits-homeowner.aspx]
+The State of Maryland’s Maryland Historic Trust offers its own tax credit program for an additional 20% rebate on your state income taxes, but they have their own application and review process.   See [https://mht.maryland.gov/Pages/funding/tax-credits-homeowner.aspx](https://mht.maryland.gov/Pages/funding/tax-credits-homeowner.aspx)
 
 ### Preservation
 
