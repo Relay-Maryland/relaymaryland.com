@@ -1,10 +1,12 @@
 ---
-import routes from '../../data/routes.json';
+import topLevelRoutes from '../../data/topLevelRoutes.json';
 
 import NavBrand from './NavBrand.astro';
 import NavLink from './NavLink.astro';
 
-const nonHomeRoutes = routes.filter((route) => !Object.hasOwn(route, '/'));
+const nonHomeRoutes = topLevelRoutes.filter(
+  (route) => !Object.hasOwn(route, '/'),
+);
 ---
 
 <style>
