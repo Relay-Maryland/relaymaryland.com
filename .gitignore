@@ -24,3 +24,8 @@ pnpm-debug.log*
 .Rproj.user/
 relay_web.Rproj
 .RData
+
+# Cypress
+/cypress/screenshots/
+/cypress/videos/
+/cypress/downloads/

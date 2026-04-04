@@ -8,7 +8,15 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "build-and-preview": "npm run build && npm run preview",
+    "test": "npm run test:prod",
+    "test:dev": "CYPRESS_TEST_MODE=dev start-server-and-test dev http://localhost:4321 cypress:run",
+    "test:prod": "CYPRESS_TEST_MODE=prod start-server-and-test build-and-preview http://localhost:4321 cypress:run",
+    "test:dev:open": "CYPRESS_TEST_MODE=dev start-server-and-test dev http://localhost:4321 cypress:open",
+    "test:prod:open": "CYPRESS_TEST_MODE=prod start-server-and-test build-and-preview http://localhost:4321 cypress:open",
+    "cypress:run": "cypress run",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.3",
@@ -16,5 +24,10 @@
     "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.1.3",
     "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {
+    "cypress": "^14.0.0",
+    "start-server-and-test": "^3.0.0",
+    "typescript": "^5.7.0"
   }
 }
