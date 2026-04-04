@@ -1,17 +1,13 @@
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import mdx from '@astrojs/mdx';
+import { defineConfig } from "astro/config";
+import mdx from "@astrojs/mdx";
+
+import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    tailwind({
-      // Tell @astrojs/tailwind to not inject default `base.css` on every page
-      // so we can define and import our own custom `base.css`.
-      applyBaseStyles: false,
-      // Apply the tailwindcss/nesting postcss plugin.
-      nesting: true
-    }),
-    mdx()
-  ]
+  integrations: [mdx()],
+
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

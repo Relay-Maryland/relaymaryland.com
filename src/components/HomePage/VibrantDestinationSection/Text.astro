@@ -4,11 +4,12 @@ const park = 'https://dnr.maryland.gov/publiclands/Pages/central/patapsco.aspx';
 ---
 
 <style>
+  @reference "../../../relay.css";
   .text-overlay {
     @apply w-11/12 xs:w-10/12 md:w-4/5 lg:w-3/4 xl:w-2/3 max-w-screen-lg;
     @apply p-6 lg:p-8 rounded-lg;
     @apply flex flex-col md:grid grid-cols-12 gap-x-10 gap-y-6 md:gap-y-8;
-    @apply bg-redYellowGradient md:bg-none md:bg-[#000] md:bg-opacity-70;
+    @apply bg-redYellowGradient md:bg-none md:bg-[#000]/70;
   }
   li {
     @apply flex gap-1 md:gap-2 lg:gap-3 mb-2 lg:mb-3;
