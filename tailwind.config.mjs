@@ -1,16 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-import defaultTheme from 'tailwindcss/defaultTheme';
-
 import colors from './src/data/colors/colors.mjs';
 
 export default {
   content: ['./src/**/*.{astro,html,md,mdx,svg}'],
   theme: {
-    screens: {
-      xxs: '320px',
-      xs: '475px',
-      ...defaultTheme.screens
-    },
     colors,
     extend: {
       backgroundImage: {

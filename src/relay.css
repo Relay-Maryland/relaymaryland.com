@@ -1,6 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.mjs";
+
+@theme {
+  --breakpoint-xxs: 320px;
+  --breakpoint-xs: 475px;
+}
 
 @layer utilities {
   .leading-none {
@@ -115,23 +119,21 @@
   }
 }
 
-@layer components {
-  .container {
-    @apply w-full max-w-screen-xl mx-auto;
-    @apply px-4 lg:px-5;
-  }
+@utility container {
+  @apply w-full max-w-screen-xl mx-auto;
+  @apply px-4 lg:px-5;
+}
 
-  .page-hr {
-    @apply mt-2 mb-3 md:mt-4 md:mb-6 h-0 sm:h-1;
-    @apply border-red bg-red;
-    @apply dark:border-yellow dark:bg-yellow;
-  }
+@utility page-hr {
+  @apply mt-2 mb-3 md:mt-4 md:mb-6 h-0 sm:h-1;
+  @apply border-red bg-red;
+  @apply dark:border-yellow dark:bg-yellow;
+}
 
-  .box-shadow {
-    box-shadow: var(--shadow-elevation-low-light);
+@utility box-shadow {
+  box-shadow: var(--shadow-elevation-low-light);
 
-    @media (prefers-color-scheme: dark) {
-      box-shadow: var(--shadow-elevation-medium-dark);
-    }
+  @media (prefers-color-scheme: dark) {
+    box-shadow: var(--shadow-elevation-medium-dark);
   }
 }

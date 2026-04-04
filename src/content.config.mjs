@@ -1,7 +1,8 @@
 import { z, defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 const calendarCollection = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '**/*.yml', base: './src/content/calendar' }),
   schema: z.object({
     date: z.coerce.date(),
     dateEnd: z.coerce.date().optional(),
@@ -13,7 +14,7 @@ const calendarCollection = defineCollection({
 });
 
 const newsCollection = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.md', base: './src/content/news' }),
   schema: z.object({
     date: z.coerce.date(),
     title: z.string(),
