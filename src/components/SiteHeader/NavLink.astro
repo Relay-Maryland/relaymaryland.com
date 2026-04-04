@@ -1,7 +1,8 @@
 ---
 const { route } = Astro.props;
 const [path, title] = Object.entries(route)[0];
-const pathIsActive = Astro.url.pathname.includes(path);
+const pathname = Astro.url.pathname;
+const pathIsActive = pathname === path || pathname.startsWith(`${path}/`);
 ---
 
 <style>
