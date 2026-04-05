@@ -1,21 +1,20 @@
-## Community History - Snippet 
+## Community History - Snippet
 
-The village of Relay is halfway between Baltimore and Ellicott City. It was created in 1830 as a change point, or “relay,” for horses hauling the first scheduled railroad cars in the United States.
+The village of Relay is halfway between Baltimore and Ellicott City. It was created in 1830 as a change point, or "relay," for horses hauling the first scheduled railroad cars in the United States.
 
 ## Unique Community attributes
 
-Historic Relay and St. Denis is a vibrant destination. Nearby is the glorious Patapsco State Park and National historic landmark Thomas Viaduct. Relay is a popular destination for train, recreation and exercise enthusiasts. The picturesque streets highlight the glory of historic Baltimore County Maryland. 
+Historic Relay and St. Denis is a vibrant destination. Nearby is the glorious Patapsco State Park and National historic landmark Thomas Viaduct. Relay is a popular destination for train, recreation and exercise enthusiasts. The picturesque streets highlight the glory of historic Baltimore County Maryland.
 
-* Well-preserved residential architecture
+- Well-preserved residential architecture
 
-* Tradition of activism and community engagement
+- Tradition of activism and community engagement
 
-* Within Walking distance to Public Library and Senior Center
+- Within Walking distance to Public Library and Senior Center
 
-* Close to BWI
+- Close to BWI
 
-* MARC train to go to Washington DC.
-
+- MARC train to go to Washington DC.
 
 ## Community Location
 

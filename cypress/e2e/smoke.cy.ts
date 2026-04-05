@@ -9,7 +9,7 @@ const EXPECTED_TITLES: Record<string, string> = {
 
 describe("Page titles", () => {
   for (const [path, title] of Object.entries(EXPECTED_TITLES)) {
-    it(`sets the document title to “${title}” on ${path}`, () => {
+    it(`sets the document title to "${title}" on ${path}`, () => {
       cy.visit(path);
       cy.title().should("eq", title);
     });
