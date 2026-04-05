@@ -1,3 +1,5 @@
+const GOOGLE_DRIVE_FILE_RE = /^https:\/\/drive\.google\.com\/file\/d\/[^/]+\//;
+
 describe("RIA membership page", () => {
   beforeEach(() => {
     cy.visit("/ria");
@@ -43,6 +45,44 @@ describe("RIA membership page", () => {
       .should("be.visible")
       .and("have.attr", "target", "_blank")
       .and("have.attr", "rel", "noopener noreferrer");
+  });
+
+  it("shows the downloadable membership form and opens a valid Google Drive document", () => {
+    cy.contains("h3", "Membership form").should("be.visible");
+
+    cy.contains("a", "RIA membership form")
+      .should("be.visible")
+      .should(($a) => {
+        expect($a.attr("href"), "membership form href").to.match(
+          GOOGLE_DRIVE_FILE_RE,
+        );
+      })
+      // Alias so we can refer to this same link again without repeating cy.contains (use @name with cy.get).
+      .as("membershipForm");
+
+    // cy.get("@alias") re-queries the element saved by .as("alias") above.
+    cy.get("@membershipForm")
+      .invoke("attr", "href")
+      .then((href) => {
+        expect(href, "membership form href").to.be.a("string").and.not.be.empty;
+        cy.request(href as string).then((response) => {
+          expect(response.status, "membership form URL responds").to.eq(200);
+          expect(
+            response.body.length,
+            "membership form URL returns a non-empty document",
+          ).to.be.greaterThan(500);
+        });
+      });
+
+    cy.get("@membershipForm").click(); // same aliased link
+
+    // After the click, the browser is on drive.google.com (different origin than localhost). Commands
+    // that run on that page must live inside cy.origin with that site’s origin.
+    cy.origin("https://drive.google.com", () => {
+      cy.url().should("match", /drive\.google\.com\/file\/d\/[^/?]+/);
+      cy.get("body").should("be.visible");
+      cy.title().should("not.be.empty");
+    });
   });
 
   it("embeds the current newsletter PDF under the Newsletter heading", () => {
