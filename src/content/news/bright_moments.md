@@ -6,7 +6,7 @@ blurb: A jazzy music event in Relay!
 
 ## Bright Moments at the Hall
 
-![Concert flyer](../../img/2026-08-28 Concert .png)
+![Concert flyer](../../img/2026-08-28_Concert.png)
 
 Bright Moments at the Hall is a ticketed event with seating limited to 80. We suggest a donation of $25 per seat, but we ask that you give what you can. 
 Those who can give more will make this event accessible to all and help ensure future community concerts.
