@@ -14,6 +14,8 @@ As *The Argus and Baltimore Countian* noted decades ago, the Town Hall has alway
 
 The Town Hall was preserved for us by generations of neighbors who raised funds through Relay Day celebrations, Victorian Teas, history talks, and club donations. Members of the Grandfathers Club, Relay Women's Club, and neighbors who tackled major renovations in the 1990s left us a cherished landmark.
 
+![Relay Improvement Association members reviewing plans during Town Hall renovations](../../img/giving-tuesday-town-hall-renovation.png)
+
 Now, it is our turn to carry that work forward.
 
 Like our own homes, the Town Hall faces rising costs for utilities, fuel, building supplies, and ongoing maintenance.
