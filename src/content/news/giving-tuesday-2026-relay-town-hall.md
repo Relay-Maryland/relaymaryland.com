@@ -1,7 +1,7 @@
 ---
 date: 2026-11-19
-title: Preserving Our History: GivingTuesday 2026 for Relay Town Hall
-blurb: Join us this GivingTuesday in supporting the Relay Town Hall Maintenance Fund to preserve our historic community heart for future generations.
+title: "Preserving Our History: GivingTuesday 2026 for Relay Town Hall"
+blurb: "Join us this GivingTuesday in supporting the Relay Town Hall Maintenance Fund to preserve our historic community heart for future generations."
 ---
 
 ![Historic Relay Town Hall](../../img/giving-tuesday-town-hall.png)
